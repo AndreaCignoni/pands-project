@@ -4,6 +4,10 @@
 # Author: Andrea Cignoni
 
 import pandas as pd
+import numpy as pd
+import os
+import matplotlib as plt
+import seaborn as sns
 
 df = pd.read_csv("iris.csv", header=None)
 df.columns= ['sepal_lenght','sepal_width','petal_lenght','petal_width','class']
