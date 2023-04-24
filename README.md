@@ -1,9 +1,10 @@
-<h1 align="center">
+<div align="center">
 
 # *pands-project*
 # **FISHER'S IRIS DATA SET ANALYSIS**
-</h1>
-<p align="justify">
+</div>
+
+<div align="justify">
 
 In 1936, Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962), the already reknown British statistician and geneticist   published a report titled “The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics where his Iris flower data set was proposed as an example of discriminant analysis and as a method to predict qualitative values. He used it to distinguish the different species of Iris flowers from each other using the combination of the four measurement variables in the data set: *petal lenght*, *petal width*, *sepal legth* and *sepal width*.  
 The Iris dataset consists of 150 instances with 50 plants each of three classes of Iris plant, namely *Iris versicolor*, *Iris virginica* and *Iris setosa*. Sir Ronald Fisher summarised his studies in a diagram where he developed a discriminant function that performed well in discriminating between these species. However, as shown in the below picture, the three species of Iris are very similar and it is, therefore, very interesting to note how the different species characterization can be drawn from a statistical perspective.
@@ -13,7 +14,7 @@ The Iris dataset consists of 150 instances with 50 plants each of three classes 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/Iris.png)
 
 </div>
-My analysis will then plot the similarities and the differences of the three species starting from this values collection and I will shape each flower's characteristics on ghraphs giving a mathematical reconstruction of their visual differentiation.
+My analysis will then plot the similarities and the differences of the three species starting from this values collection and I will shape each flower's characteristics on ghraphs giving a mathematical reconstruction of their visual differentiation.  
 The DATA file containing the reknown and long-studied **Fisher's Iris data set** have been downloaded from [www.archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/). DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either binary files or text files. In the text file, the newline character is converted to carriage-return/linefeed before being written to the disk and content written is human readable. On the contrary, in binary files, conversion of newline to carriage-return and linefeed does not take place and content is not human readable and looks like encrypted content. In order to find out which cathegory the DATA file downloaded belonged to and proceed to convert it accordingly, I have opened the data set in a .txt format. Since the content appeared readable and structured so that a comma separated individual items and each record was on a new line just as the standard pattern of a CSV tabular disposition, I have proceeded to open it as such in Python and imported the modules that allowed me to start the analysis on the data set: **Pandas**; **Matplotlib**;**Numpy**;**Seaborn**;**Os**.  
 **Pandas**
 
@@ -59,4 +60,4 @@ My point of reference here for scatterplots and their usage is [www.visme.co](ht
 
 
 
-</p>
+</div>
