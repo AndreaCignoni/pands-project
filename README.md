@@ -10,7 +10,7 @@ The Iris dataset consists of 150 instances with 50 plants each of three classes 
 <div align="center">
     <img src="/screenshots/screen1.jpg" width="400px"</img> 
 
-![Screenshot](image.png)
+![Screenshot](C:\Users\User\OneDrive\Desktop\Iris.png)
 
 </div>
 
