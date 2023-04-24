@@ -1,13 +1,14 @@
 # Analysis.py
 # This program summarizes my researches Fisher’s Iris data set'
-# grouping differnt variables in histograms and scatter plots
 # Author: Andrea Cignoni
 
 import pandas as pd
-import numpy as pd
+import numpy as np
 import os
 import matplotlib as plt
 import seaborn as sns
+
+# Reading the Fisher's data set from the file downloaded (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
 
 df = pd.read_csv("iris.csv", header=None)
 df.columns= ['sepal_lenght','sepal_width','petal_lenght','petal_width','class']
@@ -25,6 +26,7 @@ print(df)
       -- Iris Versicolour
       -- Iris Virginica 
 '''
+# grouping differnt variables in histograms
 
 def histogram():
 
