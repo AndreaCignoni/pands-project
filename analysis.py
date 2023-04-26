@@ -6,13 +6,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Reading the Fisher's data set from the file downloaded (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
+# Reading and formatting the data set downloaded (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
 
 df = pd.read_csv("iris.csv", header=None,)
 df.columns= ['sepal_lenght','sepal_width','petal_lenght','petal_width','class']
 
 # this shows first and last five raws of all data  
-# print (df)
+"""""
+print (df)
+"""
 
 # to display stats about data
 # print (df.describe())
@@ -66,3 +68,4 @@ plt.ylabel('Petal width [cm]')
 plt.legend(loc='upper right')
 
 # plt.show()
+

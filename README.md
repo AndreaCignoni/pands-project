@@ -17,16 +17,23 @@ The Iris dataset consists of 150 instances with 50 plants each of three classes 
 My analysis will then plot the similarities and the differences of the three species starting from this values collection and I will shape each flower's characteristics on ghraphs giving a mathematical reconstruction of their visual differentiation. The histograms will be used to summarize their main feactures while the scatterplots will visually highlight how each individual flower develop its own peculiarities. I will finally pass to reproduce their discriminant factor on a logic point of you. My aim is to outline the measurement ranges characteristic to each species and show how to recognize every specific flower on a mathematic point of view.
 
 **LOADING DATASET**
+
 The DATA file containing the reknown and long-studied **Fisher's Iris data set** have been downloaded from [www.archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/). DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either binary files or text files. In the text file, the newline character is converted to carriage-return/linefeed before being written to the disk and content written is human readable. On the contrary, in binary files, conversion of newline to carriage-return and linefeed does not take place and content is not human readable and looks like encrypted content. In order to find out which cathegory the DATA file downloaded belonged to and proceed to convert it accordingly, I have opened the data set in a .txt format. Since the content appeared readable and structured so that a comma separated individual items and each record was on a new line just as the standard pattern of a CSV tabular disposition, I have proceeded to open it as such in Python and imported the modules that allowed me to start the analysis on the data set: **Pandas**; **Matplotlib**;**Numpy**.
 
 **Pandas**
 
+*Pandas* is an open source Python package that is most widely used for data science/data analysis and machine learning tasks. Pandas makes it simple to do many of the time consuming, repetitive tasks associated with working with data, including: data cleansing, data fill, data normalization, merges and joins, data visualization,statistical analysis, data inspection, loading and saving data and much more.
+
 **Matplotlib**
+
+*Matplotlib* is a Python library used to create 2D graphs and plots by using Python scripts. It has a module named *pyplot* which makes things easy for plotting by providing feature to control line styles, font properties, formatting axes etc. It supports a very wide variety of graphs and plots namely - histogram, bar charts, power spectra, error charts etc. 
 
 **Numpy**
 
+*Matplotlib* is used along with *NumPy* to provide an environment with an effective and fast numeric computing. *Numpy* provides a multidimensional array object and various derived objects (such as masked arrays and matrices).
 
 **LOADING THE SET**
+
 As already pointed out, the data set contains 3 classes of 50 instances each, where each class refers to a type of Iris plant. One plant is linearly separable from the other 2; the latter are not separable from each other. Attribute information:
 1. sepal length in cm;
 2. sepal width in cm;
@@ -34,10 +41,12 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 4. petal width in cm;
 4. class: Iris Setosa; Iris Versicolour; Iris Virginica
 
-In order to display stats about data set, I have used function *df.describe()*: sum of *count*, *mean*, *std*, *min* and *maximum* in cm of each sepal and petal, lenght and width.
-The type of data stored in the file showed that the measure in cm were stored in *float64* and the species were objects. This information were retrieved with function *df.info*. To visualize the number of samples of each class : *df['class'].value_count*. For each class the data set presents 50 samples
+In order to display stats about data set, I have used the function *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* in cm of each sepal and petal, lenght and width.The type of data stored in the file showed that the measure in cm were stored in *float64* format and the species were objects. This information were retrieved with function *df.info*. To visualize the number of samples of each class is *df['class'].value_count*. For each class the data set presents 50 samples
 
 **PREPROCESSING THE DATA SET**
+
+*Preprocessing data* removes missing or inconsistent data values resulting from human or computer error, which can improve the accuracy and quality of a dataset, making it more reliable. It makes data consistent. This helps to get rid of unhelpful parts of the data and transforms the data into a format that is more easily and effectively processed in data mining, machine learning and other data science tasks. This procedure was performed with the following functions:
+
 *check for null values*
 df.isnull().sum()= no null values
 
