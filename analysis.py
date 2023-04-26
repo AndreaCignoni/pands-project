@@ -11,18 +11,20 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("iris.csv", header=None,)
 df.columns= ['sepal_lenght','sepal_width','petal_lenght','petal_width','class']
 
-# to display stats about data
+# this shows first and last five raws of all data  
+# print (df)
 
-# df.describe()
+# to display stats about data
+# print (df.describe())
 
 # basic info about data type
-# df.info ()
+# print (df.info ())
 
 # to display number of samples on each class
-# df['class'].value_counts()
+# print (df['class'].value_counts())
 
 # Preprocessing the dataset: check for null values
-# df.isnull().sum()
+# print (df.isnull().sum())
 
 # grouping differnt variables in histograms
 
@@ -33,7 +35,7 @@ y = np.where(y == 'Iris-setosa', 0, 1)
 # extract sepal length and petal length
 X = df.iloc[0:150, [0, 2]].values
 
-# plot data
+# scaterplot lenght data
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
@@ -45,6 +47,22 @@ plt.xlabel('Sepal length [cm]')
 plt.ylabel('Petal length [cm]')
 plt.legend(loc='upper left')
 
-plt.show()
+# plt.show()
 
+# extract sepal width and petal width
 
+X = df.iloc[0:150, [1, 3]].values
+
+# scatterplot width data
+plt.scatter(X[:50, 0], X[:50, 1],
+            color='blue', marker= 'o', label='Setosa')
+plt.scatter(X[50:100, 0], X[50:100, 1],
+            color='green', marker='s', label='Versicolor')
+plt.scatter(X[100:150, 0], X[100:150, 1],
+            color='red', marker='*', label='Versicolor')
+
+plt.xlabel('Sepal width [cm]')
+plt.ylabel('Petal width [cm]')
+plt.legend(loc='upper right')
+
+# plt.show()
