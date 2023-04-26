@@ -12,9 +12,7 @@ df = pd.read_csv("iris.csv", header=None,)
 df.columns= ['sepal_length','sepal_width','petal_length','petal_width','class']
 
 # this shows first and last five raws of all data  
-"""""
-print (df)
-"""
+# print (df)
 
 # to display stats about data
 # print (df.describe())
@@ -26,15 +24,67 @@ print (df)
 # print (df['class'].value_counts())
 
 # Preprocessing the dataset: check for null values
+
 # print (df.isnull().sum())
 
-# grouping differnt variables in histograms
+# HISTOGRAMS
+
+# 1. Plotting sepal lengths
+
+plt.figure(figsize = (10, 7))
+x = df["sepal_length"]
+  
+plt.hist(x, bins = 20, color = "green")
+plt.title("Sepal Length in cm")
+plt.xlabel("Sepal_Length_cm")
+plt.ylabel("Count")
+
+plt.show()
+
+# 2. Plotting sepal width
+
+plt.figure(figsize = (10, 7))
+x = df["sepal_width"]
+  
+plt.hist(x, bins = 20, color = "green")
+plt.title("Sepal Width in cm")
+plt.xlabel("Sepal_Width_cm")
+plt.ylabel("Count")
+  
+plt.show()
+
+# 3. Plotting petal length
+
+plt.figure(figsize = (10, 7))
+x = df['petal_length']
+
+plt.hist(x, bins = 20, color = "blue")
+plt.title("Petal Length in cm")
+plt.xlabel("Petal_Length_cm")
+plt.ylabel("Count")
+
+plt.show()
+
+# 4. Plotting petal width
+
+plt.figure(figsize = (10, 7))
+x = df['petal_width']
+
+plt.hist(x, bins = 20, color = "blue")
+plt.title("Petal Width in cm")
+plt.xlabel("Petal_Width_cm")
+plt.ylabel("Count")
+
+plt.show()
+
+# SCATTERPLOTS
 
 # select setosa and versicolor and virginica
 y = df.iloc[0:150, 4].values
 y = np.where(y == 'Iris-setosa', 0, 1)
-"""""
-# extract sepal length and petal length
+
+# 1. Sepal and petal length
+
 X = df.iloc[0:150, [0, 2]].values
 
 # scaterplot lenght data
@@ -51,7 +101,7 @@ plt.legend(loc='upper left')
 
 # plt.show()
 
-# extract sepal and petal width
+# 2. Sepal and petal width
 
 X = df.iloc[0:150, [1, 3]].values
 
@@ -69,7 +119,7 @@ plt.legend(loc='upper right')
 
 # plt.show()
 
-# extract petal width and length
+# 3. Petal width and length
 
 X = df.iloc[0:150, [2, 3]].values
 
@@ -86,8 +136,8 @@ plt.ylabel('Petal width [cm]')
 plt.legend(loc='upper left')
 
 plt.show()
-"""""
-# extract sepal width and length
+
+# 4. Sepal width and length
 
 X = df.iloc[0:150, [0, 1]].values
 

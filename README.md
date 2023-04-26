@@ -22,7 +22,7 @@ The DATA file containing the reknown and long-studied **Fisher's Iris data set**
 
 **Pandas**
 
-*Pandas* is an open source Python package that is most widely used for data science/data analysis and machine learning tasks. Pandas makes it simple to do many of the time consuming, repetitive tasks associated with working with data, including: data cleansing, data fill, data normalization, merges and joins, data visualization,statistical analysis, data inspection, loading and saving data and much more.
+*Pandas* is an open source Python package that is most widely used for data science/data analysis and machine learning tasks. Pandas makes it simple to do many of the time consuming, repetitive tasks associated with working with data, including: data cleansing, data fill, data normalization, merges and joins, data visualization,statistical analysis, data inspection, loading and saving data and much more. Here, I am using this module mainly to indexing the DataFrame to extract the desired columns and raws.
 
 **Matplotlib**
 
@@ -51,12 +51,15 @@ In order to display stats about data set, I have used the function *df.describe(
 df.isnull().sum()= no null values
 
 **EXPLORATORY DATA SET** 
-The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. Spikes in the graphs variations to be pointed out.
 
-df['SepalLenghtCm'].hist()
-df['SepalWidthCm'].hist()
-df['PetalLenghtCm'].hist()
-df['PetalWidthCm'].hist()
+The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. Spikes in the graphs variations to be pointed out. One key concept when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The hist method can accept a few different arguments, but the most important two are:
+
+**x**: the data set to be displayed within the histogram.
+**bins**: the number of bins that the histogram should be divided into.
+
+Since histograms do not accept objects, my first step was to remove all non-numeric columns from the data set.
+
+My main point of reference for plotting histograms on the Fisher's Iris data set was [www.nickmccullum.com](https://www.nickmccullum.com/python-visualization/histogram/).
 
 The **scatterplots** attributing a different colour for each class and considering their petal/sepal width on the y axis and length on the x axis describe correlations between the two pairs of variables (lenght and width/ petals and sepals) of the three species.
 The patterns or correlations can be either:
