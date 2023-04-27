@@ -14,7 +14,7 @@ The Iris dataset consists of 150 instances with 50 plants each of three classes 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/Iris.png)
 
 </div>
-My analysis will then plot the similarities and the differences of the three species starting from this values collection and I will shape each flower's characteristics on ghraphs giving a mathematical reconstruction of their visual differentiation. The histograms will be used to summarize their main feactures while the scatterplots will visually highlight how each individual flower develop its own peculiarities. I will finally pass to reproduce their discriminant factor on a logic point of you. My aim is to outline the measurement ranges characteristic to each species and show how to recognize every specific flower on a mathematic point of view.
+My analysis will then plot the similarities and the differences of the three species starting from this values collection and I will shape each flower's characteristics on ghraphs giving a mathematical reconstruction of their visual differentiation. The histograms will be used to summarize their main feactures while the scatterplots will visually highlight how each individual flower develop its own peculiarities. I will finally pass to reproduce their discriminant factor on a logic point of you. My aim is to outline the measurement ranges characteristic to each species and show how to recognize every specific flower on a mathematic point of view.  
 
 **LOADING DATASET**
 
@@ -48,13 +48,17 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 </div>
 
 In order to display stats about data set, I have used the function *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* in cm of each sepal and petal, lenght and width. The type of data stored in the file showed that the measure in cm were stored in *float64* format and the species were objects. This information were retrieved with function *df.info*. To visualize the number of samples of each class is *df['class'].value_count*. As already stated, for each class the data set presents 50 samples.
-<div align="center">
+<div align="text-align: right">
+
++ *df.describe()*
 
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
 
-![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
+* *df.info ()*
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataInfo.PNG)
+
+- *df['class'].value_counts()*
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ClassCounts.PNG)
 
@@ -65,9 +69,9 @@ In order to display stats about data set, I have used the function *df.describe(
 *Preprocessing data* removes missing or inconsistent data values resulting from human or computer error, which can improve the accuracy and quality of a dataset, making it more reliable. It makes data consistent. This helps to get rid of unhelpful parts of the data and transforms the data into a format that is more easily and effectively processed in data mining, machine learning and other data science tasks. This procedure was performed with the following functions:
 
 *check for null values*
-df.isnull().sum()= no null values
+- *df.isnull().sum()* = no null values
 
-<div align="center">
+<div align="text-align: right">
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PreprocessingData.PNG)
 </div>
