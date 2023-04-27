@@ -40,18 +40,16 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 3. petal lenght in cm;
 4. petal width in cm;
 4. class: Iris Setosa; Iris Versicolour; Iris Virginica
-
 <div align="center">
+
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
 
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
 </div>
 
-
-
 In order to display stats about data set, I have used the function *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* in cm of each sepal and petal, lenght and width. The type of data stored in the file showed that the measure in cm were stored in *float64* format and the species were objects. This information were retrieved with function *df.info*. To visualize the number of samples of each class is *df['class'].value_count*. As already stated, for each class the data set presents 50 samples.
-
 <div align="center">
+
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
 
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
@@ -113,18 +111,17 @@ My point of reference here for scatterplots and their usage is [www.visme.co](ht
 
 * Petal length and width displayed.
 <div align="center">
+
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPetalLengthWidth.png)
 </div>
 
 - Sepal  and petal width compared.
-
 <div align="center">
 
 ![Scatterplot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotWidth.png)
 </div>
 
-# Petal and sepal legth compared.
-
+* Petal and sepal legth compared.
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotLength.png)
