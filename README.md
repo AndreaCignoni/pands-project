@@ -41,7 +41,26 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 4. petal width in cm;
 4. class: Iris Setosa; Iris Versicolour; Iris Virginica
 
-In order to display stats about data set, I have used the function *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* in cm of each sepal and petal, lenght and width.The type of data stored in the file showed that the measure in cm were stored in *float64* format and the species were objects. This information were retrieved with function *df.info*. To visualize the number of samples of each class is *df['class'].value_count*. For each class the data set presents 50 samples
+<div align="center">
+![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
+
+![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
+</div>
+
+
+
+In order to display stats about data set, I have used the function *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* in cm of each sepal and petal, lenght and width. The type of data stored in the file showed that the measure in cm were stored in *float64* format and the species were objects. This information were retrieved with function *df.info*. To visualize the number of samples of each class is *df['class'].value_count*. As already stated, for each class the data set presents 50 samples.
+
+<div align="center">
+![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
+
+![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataInfo.PNG)
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ClassCounts.PNG)
+
+</div>
 
 **PREPROCESSING THE DATA SET**
 
@@ -49,6 +68,11 @@ In order to display stats about data set, I have used the function *df.describe(
 
 *check for null values*
 df.isnull().sum()= no null values
+
+<div align="center">
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PreprocessingData.PNG)
+</div>
 
 **EXPLORATORY DATA SET** 
 
@@ -61,6 +85,18 @@ Since histograms do not accept objects, my first step was to remove all non-nume
 
 My main point of reference for plotting histograms on the Fisher's Iris data set was [www.nickmccullum.com](https://www.nickmccullum.com/python-visualization/histogram/).
 
+<div align="center">
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PetalLenghtHistogram.png)
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PetalWidthHistogram.png)
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/SepalLenghtHistogram.png)
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/SepalWidthHistogram.png)
+
+</div>
+
 The **scatterplots** attributing a different colour for each class and considering their petal/sepal width on the y axis and length on the x axis describe correlations between the two pairs of variables (lenght and width/ petals and sepals) of the three species.
 The patterns or correlations can be either:
 **Linear or Nonlinear**: A linear correlation forms a straight line in its data points while a non linear correlation might have a curve or other form within the data points
@@ -69,6 +105,29 @@ The patterns or correlations can be either:
 
 My point of reference here for scatterplots and their usage is [www.visme.co](https://visme.co/blog/scatter-plot/)
 
++ Sepal width and legth displayed.
+<div align="center">
 
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterSepalLengthWidth.png)
+</div>
+
+* Petal length and width displayed.
+<div align="center">
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPetalLengthWidth.png)
+</div>
+
+- Sepal  and petal width compared.
+
+<div align="center">
+
+![Scatterplot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotWidth.png)
+</div>
+
+# Petal and sepal legth compared.
+
+<div align="center">
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotLength.png)
+</div>
 
 </div>
