@@ -48,7 +48,6 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
 
-![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
 </div>
 
 **CREATING A SUMMARY OF EACH VARIABLES**
