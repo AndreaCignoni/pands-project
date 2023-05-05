@@ -18,7 +18,7 @@ My analysis will then plot the similarities and the differences of the three spe
 
 **LOADING DATASET**
 
-The DATA file containing the reknown and long-studied **Fisher's Iris data set** have been downloaded from [www.archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/). DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either binary files or text files. In the text file, the newline character is converted to carriage-return/linefeed before being written to the disk and content written is human readable. On the contrary, in binary files, conversion of newline to carriage-return and linefeed does not take place and content is not human readable and looks like encrypted content. In order to find out which cathegory the DATA file downloaded belonged to and proceed to convert it accordingly, I have opened the data set in a .txt format. Since the content appeared readable and structured so that a comma separated individual items and each record was on a new line just as the standard pattern of a CSV tabular disposition, I have proceeded to open it as such in Python and imported the modules that allowed me to start the analysis on the data set: **Pandas**; **Matplotlib**;**Numpy**.
+The DATA file containing the reknown and long-studied **Fisher's Iris data set** have been downloaded from [www.archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/). DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either binary files or text files. In the text file, the newline character is converted to carriage-return/linefeed before being written to the disk and content written is human readable. On the contrary, in binary files, conversion of newline to carriage-return and linefeed does not take place and content is not human readable and looks like encrypted content. In order to find out which cathegory the DATA file downloaded belonged to and proceed to convert it accordingly, I have opened the data set in a .txt format. Since the content appeared readable and structured so that a comma separated individual items and each record was on a new line just as the standard pattern of a CSV tabular disposition, I have proceeded to open it as such in Python and imported the modules that allowed me to start the analysis on the data set: **Pandas**; **Matplotlib**;**Numpy**;**Seaborn**.
 
 **Pandas**
 
@@ -31,6 +31,10 @@ The DATA file containing the reknown and long-studied **Fisher's Iris data set**
 **Numpy**
 
 *Matplotlib* is used along with *NumPy* to provide an environment with an effective and fast numeric computing. *Numpy* provides a multidimensional array object and various derived objects (such as masked arrays and matrices).
+
+**Seaborn**
+
+Lastly, in order to clearly display in a graphical form my conclusion, I have imported *Seaborn*. This library is built on top of the *Matplotlib* data visualization library and can perform the exploratory analysis that I needed to show the result of my searches. 
 
 **LOADING THE SET**
 
@@ -47,7 +51,10 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
 </div>
 
-In order to display stats about data set, I have used the function *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* in cm of each sepal and petal, lenght and width. The type of data stored in the file showed that the measure in cm were stored in *float64* format and the species were objects. This information were retrieved with function *df.info*. To visualize the number of samples of each class is *df['class'].value_count*. As already stated, for each class the data set presents 50 samples.
+**CREATING A SUMMARY OF EACH VARIABLES**
+
+In order to display in a user-friendly format the content of the dataset, I have created a text file which contained the most relevant information of the measurements of the variables sepal length and width, petal length and width of the three classes of flowers. For this porpuse, I have grouped the output of the functions *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* into a brif summary called *irisDatasetSummary.txt* . As the *df.info* function shows, the the measures in cm were stored in a *float64* format and the species as objects. To visualize the number of samples of each class, I have included in the text file the output of the *df['class'].value_count* function:
+
 <div align="text-align: right">
 
 + *df.describe()*

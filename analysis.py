@@ -5,27 +5,31 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sn
 
 # Reading and formatting the data set downloaded (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
 
 df = pd.read_csv("iris.csv", header=None,)
+
+# Creating a file called *irisDatasetSummary.txt* to summarize the basic information of the dataset
+print("This dataset contains 5 variables, 4 measurements and class of flower, for 150 observations", file =open("irisDatasetSummary.txt", "w"))
+
+print("\n","Below are shown the first and the last five raws of the dataset", file=open("irisDatasetSummary.txt", "a"))
 df.columns= ['sepal_length','sepal_width','petal_length','petal_width','class']
-
 # this shows first and last five raws of all data  
-# print (df)
-
+print(df, file=open("irisDatasetSummary.txt", "a"))
+print("\n","These are the main statistical information of the dataset","\n",file=open("irisDatasetSummary.txt","a"))
 # to display stats about data
-# print (df.describe())
-
+print(df.describe(),file=open("irisDatasetSummary.txt","a"))
+print("\n","These are the data type of the dataset","\n", file=open("irisDatasetSummary.txt","a"))
 # basic info about data type
-# print (df.info ())
-
+print(df.info(),file=open("irisDatasetSummary.txt","a"))
+print("\n","Number of samples for each class","\n",file=open("irisDatasetSummary.txt","a"))
 # to display number of samples on each class
-# print (df['class'].value_counts())
-
+print (df['class'].value_counts(),file=open("irisDatasetSummary.txt","a"))
 # Preprocessing the dataset: check for null values
-
-# print (df.isnull().sum())
+print("\n","As shown below, no missing values were found in the raw file","\n",file=open("irisDatasetSummary.txt","a"))
+print (df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # HISTOGRAMS
 
@@ -39,7 +43,7 @@ plt.title("Sepal Length in cm")
 plt.xlabel("Sepal_Length_cm")
 plt.ylabel("Count")
 
-plt.show()
+# plt.show()
 
 # 2. Plotting sepal width
 
@@ -51,7 +55,7 @@ plt.title("Sepal Width in cm")
 plt.xlabel("Sepal_Width_cm")
 plt.ylabel("Count")
   
-plt.show()
+# plt.show()
 
 # 3. Plotting petal length
 
@@ -63,7 +67,7 @@ plt.title("Petal Length in cm")
 plt.xlabel("Petal_Length_cm")
 plt.ylabel("Count")
 
-plt.show()
+# plt.show()
 
 # 4. Plotting petal width
 
@@ -75,7 +79,7 @@ plt.title("Petal Width in cm")
 plt.xlabel("Petal_Width_cm")
 plt.ylabel("Count")
 
-plt.show()
+# plt.show()
 
 # SCATTERPLOTS
 
@@ -135,7 +139,7 @@ plt.xlabel('Petal length [cm]')
 plt.ylabel('Petal width [cm]')
 plt.legend(loc='upper left')
 
-plt.show()
+# plt.show()
 
 # 4. Sepal width and length
 
@@ -153,4 +157,4 @@ plt.xlabel('Sepal length [cm]')
 plt.ylabel('Sepal width [cm]')
 plt.legend(loc='upper right')
 
-plt.show()
+# plt.show()
