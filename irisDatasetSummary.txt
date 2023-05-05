@@ -28,26 +28,39 @@ min        4.300000     2.000000      1.000000     0.100000
 75%        6.400000     3.300000      5.100000     1.800000
 max        7.900000     4.400000      6.900000     2.500000
 
- These are the data type of the dataset 
-
-RangeIndex: 150 entries, 0 to 149
-Data columns (total 5 columns):
- #   Column        Non-Null Count  Dtype
----  ------        --------------  -----
- 0   sepal_length  150 non-null    float64
- 1   sepal_width   150 non-null    float64
- 2   petal_length  150 non-null    float64
- 3   petal_width   150 non-null    float64
- 4   class         150 non-null    object
-dtypes: float64(4), object(1)
-memory usage: 6.0+ KB
-
  Number of samples for each class 
 
 Iris-setosa        50
 Iris-versicolor    50
 Iris-virginica     50
 Name: class, dtype: int64
+
+ The mean values of the three classes is as follows: 
+
+                 sepal_length  sepal_width  petal_length  petal_width
+class                                                                
+Iris-setosa             5.006        3.418         1.464        0.244
+Iris-versicolor         5.936        2.770         4.260        1.326
+Iris-virginica          6.588        2.974         5.552        2.026
+
+ This is how the values are correlated: 
+
+                              sepal_length  ...  petal_width
+class                                       ...             
+Iris-setosa     sepal_length      1.000000  ...     0.279092
+                sepal_width       0.746780  ...     0.279973
+                petal_length      0.263874  ...     0.306308
+                petal_width       0.279092  ...     1.000000
+Iris-versicolor sepal_length      1.000000  ...     0.546461
+                sepal_width       0.525911  ...     0.663999
+                petal_length      0.754049  ...     0.786668
+                petal_width       0.546461  ...     1.000000
+Iris-virginica  sepal_length      1.000000  ...     0.281108
+                sepal_width       0.457228  ...     0.537728
+                petal_length      0.864225  ...     0.322108
+                petal_width       0.281108  ...     1.000000
+
+[12 rows x 4 columns]
 
  As shown below, no missing values were found in the raw file 
 

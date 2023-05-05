@@ -52,7 +52,7 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 
 **CREATING A SUMMARY OF EACH VARIABLES**
 
-In order to display in a user-friendly format the content of the dataset, I have created a text file which contained the most relevant information of the measurements of the variables sepal length and width, petal length and width of the three classes of flowers. For this porpuse, I have grouped the output of the functions *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* into a brif summary called *irisDatasetSummary.txt* . As the *df.info* function shows, the the measures in cm were stored in a *float64* format and the species as objects. To visualize the number of samples of each class, I have included in the text file the output of the *df['class'].value_count* function:
+In order to display in a user-friendly format the content of the dataset, I have created a text file which contained the most relevant information of the measurements of the variables sepal length and width, petal length and width of the three classes of flowers. For this porpuse, I have grouped the output of the functions *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* into a brif summary called *irisDatasetSummary.txt*. To visualize the number of samples of each class, I have included in the text file the output of the *df['class'].value_count* function. Lastly, in order to group the measurements by their mean values and the correlation between the values of the three species, I have used sorted the information by the *groupby().mean()* and *groupby().corr()* methods.
 
 <div align="text-align: right">
 
@@ -60,13 +60,15 @@ In order to display in a user-friendly format the content of the dataset, I have
 
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
 
-* *df.info ()*
-
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataInfo.PNG)
-
 - *df['class'].value_counts()*
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ClassCounts.PNG)
+
+* *df.groupby('class').mean* and *groupby('class').corr()*
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/a6c8e3fc2a5e16921701f1c7c8e16647cfcd3b21/MeanValues.PNG)
+
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/a6c8e3fc2a5e16921701f1c7c8e16647cfcd3b21/Correlation.PNG)
 
 </div>
 

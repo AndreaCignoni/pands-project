@@ -21,15 +21,17 @@ print(df, file=open("irisDatasetSummary.txt", "a"))
 print("\n","These are the main statistical information of the dataset","\n",file=open("irisDatasetSummary.txt","a"))
 # to display stats about data
 print(df.describe(),file=open("irisDatasetSummary.txt","a"))
-print("\n","These are the data type of the dataset","\n", file=open("irisDatasetSummary.txt","a"))
-# basic info about data type
-print(df.info(),file=open("irisDatasetSummary.txt","a"))
-print("\n","Number of samples for each class","\n",file=open("irisDatasetSummary.txt","a"))
 # to display number of samples on each class
-print (df['class'].value_counts(),file=open("irisDatasetSummary.txt","a"))
+print("\n","Number of samples for each class","\n",file=open("irisDatasetSummary.txt","a"))
+print(df['class'].value_counts(),file=open("irisDatasetSummary.txt","a"))
+# Grouping the mean values of the three species and showing their correlation
+print("\n","The mean values of the three classes is as follows:","\n",file=open("irisDatasetSummary.txt","a"))
+print(df.groupby('class').mean(),file=open("irisDatasetSummary.txt","a"))
+print("\n","This is how the values are correlated:","\n",file=open("irisDatasetSummary.txt","a"))
+print(df.groupby('class').corr(),file=open("irisDatasetSummary.txt","a"))
 # Preprocessing the dataset: check for null values
 print("\n","As shown below, no missing values were found in the raw file","\n",file=open("irisDatasetSummary.txt","a"))
-print (df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
+print(df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # HISTOGRAMS
 
