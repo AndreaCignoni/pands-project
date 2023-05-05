@@ -14,15 +14,15 @@ df = pd.read_csv("iris.csv", header=None,)
 # Creating a file called *irisDatasetSummary.txt* to summarize the basic information of the dataset
 print("This dataset contains 5 variables, 4 measurements and class of flower, for 150 observations", file =open("irisDatasetSummary.txt", "w"))
 
-print("\n","Below are shown the first and the last five raws of the dataset", file=open("irisDatasetSummary.txt", "a"))
+print("\n","Below are shown the first and the last five raws of the dataset.", file=open("irisDatasetSummary.txt", "a"))
 df.columns= ['sepal_length','sepal_width','petal_length','petal_width','class']
 # this shows first and last five raws of all data  
 print(df, file=open("irisDatasetSummary.txt", "a"))
-print("\n","These are the main statistical information of the dataset","\n",file=open("irisDatasetSummary.txt","a"))
+print("\n","These are the main statistical information of the dataset:","\n",file=open("irisDatasetSummary.txt","a"))
 # to display stats about data
 print(df.describe(),file=open("irisDatasetSummary.txt","a"))
 # to display number of samples on each class
-print("\n","Number of samples for each class","\n",file=open("irisDatasetSummary.txt","a"))
+print("\n","Number of samples for each class:","\n",file=open("irisDatasetSummary.txt","a"))
 print(df['class'].value_counts(),file=open("irisDatasetSummary.txt","a"))
 # Grouping the mean values of the three species and showing their correlation
 print("\n","The mean values of the three classes is as follows:","\n",file=open("irisDatasetSummary.txt","a"))
@@ -30,7 +30,7 @@ print(df.groupby('class').mean(),file=open("irisDatasetSummary.txt","a"))
 print("\n","This is how the values are correlated:","\n",file=open("irisDatasetSummary.txt","a"))
 print(df.groupby('class').corr(),file=open("irisDatasetSummary.txt","a"))
 # Preprocessing the dataset: check for null values
-print("\n","As shown below, no missing values were found in the raw file","\n",file=open("irisDatasetSummary.txt","a"))
+print("\n","As shown below, no missing values were found in the raw file:","\n",file=open("irisDatasetSummary.txt","a"))
 print(df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # HISTOGRAMS
