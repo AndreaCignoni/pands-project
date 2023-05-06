@@ -48,11 +48,6 @@ In order to load the data frame, manipulating its information and output a summa
 4. petal width in cm;
 5. class: Iris Setosa; Iris Versicolour; Iris Virginica
 
-1. sepal length in cm;
-2. sepal width in cm;
-3. petal lenght in cm;
-4. petal width in cm;
-4. class: Iris Setosa; Iris Versicolour; Iris Virginica
 <div align="center">
 
 ![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
