@@ -6,7 +6,7 @@
 
 <div align="justify">
 
-In 1936, Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962), the already reknown British statistician and geneticist   published a report titled “The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics where his Iris flower data set was proposed as an example of discriminant analysis and as a method to predict qualitative values. He used it to distinguish the different species of Iris flowers from each other using the combination of the four measurement variables in the data set: *petal lenght*, *petal width*, *sepal legth* and *sepal width*.  
+In 1936, Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962), the already renown British statistician and geneticist,  published a report titled “The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics where his Iris flower data set was proposed as an example of discriminant analysis and as a method to predict qualitative values. He used it to distinguish the different species of Iris flowers from each other using the combination of the four measurement variables in the data set: *petal length*, *petal width*, *sepal length* and *sepal width*.  
 The Iris dataset consists of 150 instances with 50 plants each of three classes of Iris plant, namely *Iris versicolor*, *Iris virginica* and *Iris setosa*. Sir Ronald Fisher summarised his studies in a diagram where he developed a discriminant function that performed well in discriminating between these species. However, as shown in the below picture, the three species of Iris are very similar and it is, therefore, very interesting to note how the different species characterization can be drawn from a statistical perspective.
 <div align="center">
     <img src="/screenshots/screen1.jpg" width="400px"</img> 
@@ -14,15 +14,16 @@ The Iris dataset consists of 150 instances with 50 plants each of three classes 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/Iris.png)
 
 </div>
-My analysis will then plot the similarities and the differences of the three species starting from this values collection and I will shape each flower's characteristics on ghraphs giving a mathematical reconstruction of their visual differentiation. The histograms will be used to summarize their main feactures while the scatterplots will visually highlight how each individual flower develop its own peculiarities. I will finally pass to reproduce their discriminant factor on a logic point of you. My aim is to outline the measurement ranges characteristic to each species and show how to recognize every specific flower on a mathematic point of view.  
 
-**LOADING DATASET**
+Starting from a classification problem, namely how to distinguish the three species starting from their measurements, my analysis plots the similarities and the differences of the three species shaping each flower's characteristics on graphs and giving a mathematical reconstruction of their visual differentiation. The histograms are used to summarize their main features while the scatterplots visually highlight how each individual flower develop its own peculiarities. I then pass to reproduce their discriminant factor on a logic point of you as my aim is to outline the measurement ranges characteristic to each species and to show how to recognize every specific flower on a mathematic point of view. Through my explanatory data analysis, I finally attribute a distinction principle that allows to predict the flower class from its attributes (its measurements). My work tries to reproduce the demostrations shown on the following lecture [www.YouTube.com] (https://www.youtube.com/watch?v=FLuqwQgSBDw).
 
-The DATA file containing the reknown and long-studied **Fisher's Iris data set** have been downloaded from [www.archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/). DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either binary files or text files. In the text file, the newline character is converted to carriage-return/linefeed before being written to the disk and content written is human readable. On the contrary, in binary files, conversion of newline to carriage-return and linefeed does not take place and content is not human readable and looks like encrypted content. In order to find out which cathegory the DATA file downloaded belonged to and proceed to convert it accordingly, I have opened the data set in a .txt format. Since the content appeared readable and structured so that a comma separated individual items and each record was on a new line just as the standard pattern of a CSV tabular disposition, I have proceeded to open it as such in Python and imported the modules that allowed me to start the analysis on the data set: **Pandas**; **Matplotlib**; **Numpy**; **Seaborn**.
+**LIBRARIES IMPORTED**
+
+The DATA file containing the long-studied **Fisher's Iris data set** has been downloaded from [www.archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/) where it is found in the DATA format. The first problem is to open it and visualize all its information. DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either *binary files* or *text files*. In *the text file*, the newline character is converted to carriage-return/linefeed before being written to the disk and the content written is human readable. On the contrary, in *binary files*, conversion of newline to carriage-return and linefeed does not take place. The content is not human readable and looks like encrypted content. In order to find out which of the categories the DATA file downloaded belonged to and, consequently, converting it, I have opened the data set in a .txt format. Since the information appears readable and structured just as the standard pattern of a CSV tabular disposition (a comma separates individual items and each record is on a new line), I have proceeded to open it as such in Python and, then, I have imported the modules that help me develop my analysis on the data set: **Pandas**; **Matplotlib**; **Numpy**; **Seaborn**.
 
 **Pandas**
 
-*Pandas* is an open source Python package that is most widely used for data science/data analysis and machine learning tasks. Pandas makes it simple to do many of the time consuming, repetitive tasks associated with working with data, including: data cleansing, data fill, data normalization, merges and joins, data visualization,statistical analysis, data inspection, loading and saving data and much more. Here, I am using this module mainly to indexing the DataFrame to extract the desired columns and raws.
+*Pandas* is an open source Python package that is most widely used for data science/data analysis and machine learning tasks. *Pandas* makes it simple to do many of the time consuming, repetitive tasks associated with working with data, including: data cleansing, data fill, data normalization, merges and joins, data visualization, statistical analysis, data inspection, loading and saving data and much more. Here, I am using this module mainly to indexing the data frame, to manipulate it and to extract the sorted information from specified columns and rows.
 
 **Matplotlib**
 
@@ -30,15 +31,23 @@ The DATA file containing the reknown and long-studied **Fisher's Iris data set**
 
 **Numpy**
 
-*Matplotlib* is used along with *NumPy* to provide an environment with an effective and fast numeric computing. *Numpy* provides a multidimensional array object and various derived objects (such as masked arrays and matrices).
+*Matplotlib* is used along with *NumPy* to provide an environment with an effective and fast numeric computing. *Numpy* furnishes a multidimensional array object and various derived objects (such as masked arrays and matrices).
 
 **Seaborn**
 
-Lastly, in order to clearly display in a graphical form my conclusion, I have imported *Seaborn*. This library is built on top of the *Matplotlib* data visualization library and can perform the exploratory analysis that I needed to show the result of my searches. 
+Lastly, in order to clearly display through *pair plots* my conclusion, I have imported *Seaborn*. This library is built on top of the *Matplotlib* data visualization library and can perform the exploratory analysis that fits best to show the result of my searches.
+
 
 **LOADING THE SET**
 
-As already pointed out, the data set contains 3 classes of 50 instances each, where each class refers to a type of Iris plant. One plant is linearly separable from the other 2; the latter are not separable from each other. Attribute information:
+In order to load the data frame, manipulating its information and output a summary of it to display an overview of its main features to a *text file*, I have expanded my knowledge of *Pandas* and its functions following the instruction contained in [www. pandas.pydata.org](https://pandas.pydata.org/docs/user_guide/10min.html). As already pointed out, the data set contains 3 classes of flowers and 50 instances of each species, where each class refers to a type of Iris plant and the 4 types of observations which makes a total of 1 dependent variable – labelled in my work as the *class*- and 4 independent variables – labelled here ‘sepal_length’, ‘sepal width’, ‘petal length’ and ‘petal width’. These attributes are expressed as follows:
+
+1. sepal length in cm;
+2. sepal width in cm;
+3. petal lenght in cm;
+4. petal width in cm;
+5. class: Iris Setosa; Iris Versicolour; Iris Virginica
+
 1. sepal length in cm;
 2. sepal width in cm;
 3. petal lenght in cm;
@@ -52,7 +61,7 @@ As already pointed out, the data set contains 3 classes of 50 instances each, wh
 
 **CREATING A SUMMARY OF EACH VARIABLES**
 
-In order to display in a user-friendly format the content of the dataset, I have created a text file which contained the most relevant information of the measurements of the variables sepal length and width, petal length and width of the three classes of flowers. For this porpuse, I have grouped the output of the functions *df.describe()* that shows the sum of *count*, *mean*, *std*, *min* and *maximum* into a brif summary called *irisDatasetSummary.txt*. To visualize the number of samples of each class, I have included in the text file the output of the *df['class'].value_count* function. Lastly, in order to group the measurements by their mean values and the correlation between the values of the three species, I have used sorted the information by the *groupby().mean()* and *groupby().corr()* methods.
+In order to display in a user-friendly format the content of the dataset, I have grouped the output of different *Pandas* functions in a text file called *irisDatasetSummary.txt* which contains the most relevant information of the data collection.  This brief summary starts with the information extracted from the *Iris Data Set* with the *df.describe()* method that shows the sum of *count*, *mean*, *std*, *min* and *maximum* of all values.  To visualize the number of samples of each class, the set is processed with the *df['class'].value_count* function. Lastly, in order to group the measurements by their mean values and the correlation between the values of the three species, I have sorted the information with the *groupby().mean()* and *groupby().corr()* methods.
 
 <div align="text-align: right">
 
@@ -74,7 +83,7 @@ In order to display in a user-friendly format the content of the dataset, I have
 
 **PREPROCESSING THE DATA SET**
 
-*Preprocessing data* removes missing or inconsistent data values resulting from human or computer error, which can improve the accuracy and quality of a dataset, making it more reliable. It makes data consistent. This helps to get rid of unhelpful parts of the data and transforms the data into a format that is more easily and effectively processed in data mining, machine learning and other data science tasks. This procedure was performed with the following functions:
+Before proceeding to my actual analysis, I have *preprocessed* the data contained in the *Iris data set* in order to remove missing or inconsistent data values resulting from human or computer error. *Preprocessing data* can significantly improve the accuracy and quality of a dataset, making it more reliable. This procedure makes data consistent and helps to get rid of unhelpful parts of the data transforming the information into a format that is more easily and effectively processed in data mining, machine learning and other data science tasks. This procedure was performed with the following function:
 
 *check for null values*
 - *df.isnull().sum()* = no null values
@@ -84,7 +93,9 @@ In order to display in a user-friendly format the content of the dataset, I have
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PreprocessingData.PNG)
 </div>
 
-**EXPLORATORY DATA SET** 
+**EXPLORATORY DATA ANALYSIS** 
+
+One plant is linearly separable from the other 2; the latter are not easily separable from each other. This is the issue I have planned to solve with my work. In order to represent it and overcome this problem which clearly emerge extracting data from the measurement collection,  I have generated different kind of graphs. In fact, while the differentiation of the *iris setosa* from the *iris versicolor* and the *iris virginica* species is immidiately depicted by the first sets of plots, drawing a rule that can be applied to differetiate the *iris versicolor* from *the virginica* is quite a more challenging task which is in the end the objective of my analysis: **to classify a new flower as belonging to one of the three species from the 4 measurement provided by the data set**.
 
 The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. Spikes in the graphs variations to be pointed out. One key concept when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The hist method can accept a few different arguments, but the most important two are:
 
