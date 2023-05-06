@@ -90,9 +90,11 @@ Before proceeding to my actual analysis, I have *preprocessed* the data containe
 
 **EXPLORATORY DATA ANALYSIS** 
 
-One plant is linearly separable from the other 2; the latter are not easily separable from each other. This is the issue I have planned to solve with my work. In order to represent it and overcome this problem which clearly emerge extracting data from the measurement collection,  I have generated different kind of graphs. In fact, while the differentiation of the *iris setosa* from the *iris versicolor* and the *iris virginica* species is immidiately depicted by the first sets of plots, drawing a rule that can be applied to differetiate the *iris versicolor* from *the virginica* is quite a more challenging task which is in the end the objective of my analysis: **to classify a new flower as belonging to one of the three species from the 4 measurement provided by the data set**.
+One plant is linearly separable from the other 2; the latter are not easily separable from each other. This is the issue I have planned to solve with my work. In order to represent it and overcome this problem which clearly emerge extracting data from the measurement collection,  I have generated different kind of graphs. My study is accordingly devided into two parts: the first where the *iris setosa* peculiarity in comparison with the other two species is outlined ; the second where I trace a distinction as clear as possible between the the other two classes, the *iris versicolor* and the *iris virginica*. As a matter of fact, while a discrimination between the *iris setosa* and the other two plants emerges from the first set of plots, drawing a rule that can be applied to differetiate the *iris versicolor* from *the virginica* is quite a more challenging task. In the end, this is the objective of my analysis: **to classify a new flower as belonging to one of the three species starting from a set of the 4 types of measurements provided by the data frame**.
 
-The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. Spikes in the graphs variations to be pointed out. One key concept when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The hist method can accept a few different arguments, but the most important two are:
+1. **HOW *IRIS SETOSA* DIFFERENT CHARACTERISTICS EASILY EMERGE FROM FIRST PLOTS**
+
+The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. Spikes in the graphs variations to be pointed out. One key concept when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The histogram method can accept a few different arguments, but the most important two are:
 
 **x**: the data set to be displayed within the histogram.
 **bins**: the number of bins that the histogram should be divided into.
@@ -113,11 +115,11 @@ My main point of reference for plotting histograms on the Fisher's Iris data set
 
 </div>
 
-The **scatterplots** attributing a different colour for each class and considering their petal/sepal width on the y axis and length on the x axis describe correlations between the two pairs of variables (lenght and width/ petals and sepals) of the three species.
+**Scatterplots** are developped attributing a different colour to each class and considering their petal/sepal width on the y axis and length on the x axis. In this way the similarities and differences between the two pairs of variables (lenght and width/ petals and sepals) are described in relation to the three species.
 The patterns or correlations can be either:
-**Linear or Nonlinear**: A linear correlation forms a straight line in its data points while a non linear correlation might have a curve or other form within the data points
-**Strong or Weak**: A strong correlation has data points close together while a week correlation has data points that are further apart
-**Positive or Negative**: A positive correlation points up (both *x* and *y* values increasing) while a negative correlation points down (*x* and *y* values decreasing)
+*Linear or Nonlinear*: A linear correlation forms a straight line in its data points while a non linear correlation might have a curve or other form within the data points
+*Strong or Weak*: A strong correlation has data points close together while a week correlation has data points that are further apart
+*Positive or Negative*: A positive correlation points up (both *x* and *y* values increasing) while a negative correlation points down (*x* and *y* values decreasing)
 
 My point of reference here for scatterplots and their usage is [www.visme.co](https://visme.co/blog/scatter-plot/)
 
