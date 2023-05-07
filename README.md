@@ -103,16 +103,16 @@ My main point of reference for plotting histograms on the Fisher's Iris data set
 
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/Petal_Length.png)
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Petal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/PetalWidthHistogram.png)
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Petal_Width.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/Sepal_Length.png)
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/Sepal_Width.png)
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Width.png)
 
 
 </div>
