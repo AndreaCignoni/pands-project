@@ -15,7 +15,7 @@ The Iris dataset consists of 150 instances with 50 plants each of three classes 
 
 </div>
 
-Starting from a classification problem, namely how to distinguish the three species starting from their measurements, my analysis plots the similarities and the differences of the three species shaping each flower's characteristics on graphs and giving a mathematical reconstruction of their visual differentiation. The histograms are used to summarize their main features while the scatterplots visually highlight how each individual flower develop its own peculiarities. I then pass to reproduce their discriminant factor on a logic point of you as my aim is to outline the measurement ranges characteristic to each species and to show how to recognize every specific flower on a mathematic point of view. Through my explanatory data analysis, I finally attribute a distinction principle that allows to predict the flower class from its attributes (its measurements). My work tries to reproduce the demostrations shown on the following lecture [YouTube](https://www.youtube.com/watch?v=FLuqwQgSBDw).  
+Starting from a classification problem, namely how to distinguish the three species starting from their measurements, my analysis plots the similarities and the differences of the three species shaping each flower's characteristics on graphs and giving a mathematical reconstruction of their visual differentiation. The histograms are used to summarize their main features while the scatterplots visually highlight how each individual flower develop its own peculiarities. I then pass to reproduce their discriminant factor on a logic point of you as my aim is to outline the measurement ranges characteristic to each species and to show how to recognize every specific flower on a mathematic point of view. Through my explanatory data analysis, I finally attribute a distinction principle that allows to predict the flower class from its attributes (its measurements). My work tries to reproduce the demostrations shown on the following lecture on [YouTube](https://www.youtube.com/watch?v=FLuqwQgSBDw).  
 
 **LIBRARIES IMPORTED**
 
@@ -96,23 +96,23 @@ One plant is linearly separable from the other 2; the latter are not easily sepa
 
 My analysis, then, starts showing and comparing the three species through histograms and scatterplots. The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. This kind of representation draws attention to the spikes appearing in the graphs. One key concept to take into account when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The histogram method can accept a few different arguments, but the most important two are:
 
-**x**: the data set to be displayed within the histogram.
+**x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
 My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PetalLenghtHistogram.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Petal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PetalWidthHistogram.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Petal_Width.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/SepalLenghtHistogram.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Sepal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/SepalWidthHistogram.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Sepal_Width.png)
 
 
 </div>

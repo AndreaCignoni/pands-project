@@ -37,51 +37,77 @@ print(df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # 1. Plotting sepal lengths
 
-plt.figure(figsize = (10, 7))
-x = df["sepal_length"]
-  
-plt.hist(x, bins = 20, color = "green")
-plt.title("Sepal Length in cm")
-plt.xlabel("Sepal_Length_cm")
-plt.ylabel("Count")
+# group data by species
+setosa = df[df['class'] == 'Iris-setosa']['sepal_length']
+versicolor = df[df['class'] == 'Iris-versicolor']['sepal_length']
+virginica = df[df['class'] == 'Iris-virginica']['sepal_length']
 
-# plt.show()
+# plot histogram
+plt.hist(setosa, alpha=0.5, label='setosa')
+plt.hist(versicolor, alpha=0.5, label='versicolor')
+plt.hist(virginica, alpha=0.5, label='virginica')
+
+plt.legend(loc='upper right')
+plt.title('Sepal Length Histogram')
+plt.xlabel('Sepal Length')
+plt.ylabel('Frequency')
+plt.show()
 
 # 2. Plotting sepal width
 
-plt.figure(figsize = (10, 7))
-x = df["sepal_width"]
+# group data by species
+setosa = df[df['class'] == 'Iris-setosa']['sepal_width']
+versicolor = df[df['class'] == 'Iris-versicolor']['sepal_width']
+virginica = df[df['class'] == 'Iris-virginica']['sepal_width']
+
+# plot histogram
+plt.hist(setosa, alpha=0.5, label='setosa')
+plt.hist(versicolor, alpha=0.5, label='versicolor')
+plt.hist(virginica, alpha=0.5, label='virginica')
+
+plt.legend(loc='upper right')
+plt.title('Sepal Width Histogram')
+plt.xlabel('Sepal Width')
+plt.ylabel('Frequency')
   
-plt.hist(x, bins = 20, color = "green")
-plt.title("Sepal Width in cm")
-plt.xlabel("Sepal_Width_cm")
-plt.ylabel("Count")
-  
-# plt.show()
+plt.show()
 
 # 3. Plotting petal length
 
-plt.figure(figsize = (10, 7))
-x = df['petal_length']
+# group data by species
+setosa = df[df['class'] == 'Iris-setosa']['petal_length']
+versicolor = df[df['class'] == 'Iris-versicolor']['petal_length']
+virginica = df[df['class'] == 'Iris-virginica']['petal_length']
 
-plt.hist(x, bins = 20, color = "blue")
-plt.title("Petal Length in cm")
-plt.xlabel("Petal_Length_cm")
-plt.ylabel("Count")
+# plot histogram
+plt.hist(setosa, alpha=0.5, label='setosa')
+plt.hist(versicolor, alpha=0.5, label='versicolor')
+plt.hist(virginica, alpha=0.5, label='virginica')
 
-# plt.show()
+plt.legend(loc='upper right')
+plt.title('Petal Length Histogram')
+plt.xlabel('Petal Length')
+plt.ylabel('Frequency')
+plt.show()
+
 
 # 4. Plotting petal width
 
-plt.figure(figsize = (10, 7))
-x = df['petal_width']
+# group data by species
+setosa = df[df['class'] == 'Iris-setosa']['petal_width']
+versicolor = df[df['class'] == 'Iris-versicolor']['petal_width']
+virginica = df[df['class'] == 'Iris-virginica']['petal_width']
 
-plt.hist(x, bins = 20, color = "blue")
-plt.title("Petal Width in cm")
-plt.xlabel("Petal_Width_cm")
-plt.ylabel("Count")
+# plot histogram
+plt.hist(setosa, alpha=0.5, label='setosa')
+plt.hist(versicolor, alpha=0.5, label='versicolor')
+plt.hist(virginica, alpha=0.5, label='virginica')
 
-# plt.show()
+plt.legend(loc='upper right')
+plt.title('Petal Width Histogram')
+plt.xlabel('Petal Width')
+plt.ylabel('Frequency')
+plt.show()
 
 # SCATTERPLOTS
 
