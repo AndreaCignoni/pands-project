@@ -96,7 +96,7 @@ One plant is linearly separable from the other 2; the latter are not easily sepa
 
 My analysis, then, starts showing and comparing the three species through histograms and scatterplots. The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. This kind of representation draws attention to the spikes appearing in the graphs. One key concept to take into account when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The histogram method can accept a few different arguments, but the most important two are:
 
-**x**: the data set to be displayed within the histogram.
+**x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
 My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
@@ -112,7 +112,7 @@ My main point of reference for plotting histograms on the Fisher's Iris data set
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Width.png)
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/7c42d117895d01509536d94a37e90c404d34c55f/Sepal_Width.png)
 
 
 </div>
