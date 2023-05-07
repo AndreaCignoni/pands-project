@@ -15,11 +15,11 @@ The Iris dataset consists of 150 instances with 50 plants each of three classes 
 
 </div>
 
-Starting from a classification problem, namely how to distinguish the three species starting from their measurements, my analysis plots the similarities and the differences of the three species shaping each flower's characteristics on graphs and giving a mathematical reconstruction of their visual differentiation. The histograms are used to summarize their main features while the scatterplots visually highlight how each individual flower develop its own peculiarities. I then pass to reproduce their discriminant factor on a logic point of you as my aim is to outline the measurement ranges characteristic to each species and to show how to recognize every specific flower on a mathematic point of view. Through my explanatory data analysis, I finally attribute a distinction principle that allows to predict the flower class from its attributes (its measurements). My work tries to reproduce the demostrations shown on the following lecture [www.YouTube.com] (https://www.youtube.com/watch?v=FLuqwQgSBDw).
+Starting from a classification problem, namely how to distinguish the three species starting from their measurements, my analysis plots the similarities and the differences of the three species shaping each flower's characteristics on graphs and giving a mathematical reconstruction of their visual differentiation. The histograms are used to summarize their main features while the scatterplots visually highlight how each individual flower develop its own peculiarities. I then pass to reproduce their discriminant factor on a logic point of you as my aim is to outline the measurement ranges characteristic to each species and to show how to recognize every specific flower on a mathematic point of view. Through my explanatory data analysis, I finally attribute a distinction principle that allows to predict the flower class from its attributes (its measurements). My work tries to reproduce the demostrations shown on the following lecture [YouTube](https://www.youtube.com/watch?v=FLuqwQgSBDw).  
 
 **LIBRARIES IMPORTED**
 
-The DATA file containing the long-studied **Fisher's Iris data set** has been downloaded from [www.archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/) where it is found in the DATA format. The first problem is to open it and visualize all its information. DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either *binary files* or *text files*. In *the text file*, the newline character is converted to carriage-return/linefeed before being written to the disk and the content written is human readable. On the contrary, in *binary files*, conversion of newline to carriage-return and linefeed does not take place. The content is not human readable and looks like encrypted content. In order to find out which of the categories the DATA file downloaded belonged to and, consequently, converting it, I have opened the data set in a .txt format. Since the information appears readable and structured just as the standard pattern of a CSV tabular disposition (a comma separates individual items and each record is on a new line), I have proceeded to open it as such in Python and, then, I have imported the modules that help me develop my analysis on the data set: **Pandas**; **Matplotlib**; **Numpy**; **Seaborn**.
+The DATA file containing the long-studied **Fisher's Iris data set** has been downloaded from [archive.ics.uci.edu](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/) where it is found in the DATA format. The first problem is to open it and visualize all its information. DATA files are used by a few software in order to store data specializing in statistical analysis and data mining and they can be either *binary files* or *text files*. In *the text file*, the newline character is converted to carriage-return/linefeed before being written to the disk and the content written is human readable. On the contrary, in *binary files*, conversion of newline to carriage-return and linefeed does not take place. The content is not human readable and looks like encrypted content. In order to find out which of the categories the DATA file downloaded belonged to and, consequently, converting it, I have opened the data set in a .txt format. Since the information appears readable and structured just as the standard pattern of a CSV tabular disposition (a comma separates individual items and each record is on a new line), I have proceeded to open it as such in Python and, then, I have imported the modules that help me develop my analysis on the data set: **Pandas**; **Matplotlib**; **Numpy**; **Seaborn**.
 
 **Pandas**
 
@@ -40,7 +40,7 @@ Lastly, in order to clearly display through *pair plots* my conclusion, I have i
 
 **LOADING THE SET**
 
-In order to load the data frame, manipulating its information and output a summary of it to display an overview of its main features to a *text file*, I have expanded my knowledge of *Pandas* and its functions following the instruction contained in [www. pandas.pydata.org](https://pandas.pydata.org/docs/user_guide/10min.html). As already pointed out, the data set contains 3 classes of flowers and 50 instances of each species, where each class refers to a type of Iris plant and the 4 types of observations which makes a total of 1 dependent variable – labelled in my work as the *class*- and 4 independent variables – labelled here ‘sepal_length’, ‘sepal width’, ‘petal length’ and ‘petal width’. These attributes are expressed as follows:
+In order to load the data frame, manipulating its information and output a summary of it to display an overview of its main features to a *text file*, I have expanded my knowledge of *Pandas* and its functions following the instruction contained in [pandas.pydata.org](https://pandas.pydata.org/docs/user_guide/10min.html). As already pointed out, the data set contains 3 classes of flowers and 50 instances of each species, where each class refers to a type of Iris plant and the 4 types of observations which makes a total of 1 dependent variable – labelled in my work as the *class*- and 4 independent variables – labelled here ‘sepal_length’, ‘sepal width’, ‘petal length’ and ‘petal width’. These attributes are expressed as follows:
 
 1. sepal length in cm;
 2. sepal width in cm;
@@ -90,28 +90,30 @@ Before proceeding to my actual analysis, I have *preprocessed* the data containe
 
 **EXPLORATORY DATA ANALYSIS** 
 
-One plant is linearly separable from the other 2; the latter are not easily separable from each other. This is the issue I have planned to solve with my work. In order to represent it and overcome this problem which clearly emerge extracting data from the measurement collection,  I have generated different kind of graphs. My study is accordingly devided into two parts: the first where the *iris setosa* peculiarity in comparison with the other two species is outlined ; the second where I trace a distinction as clear as possible between the the other two classes, the *iris versicolor* and the *iris virginica*. As a matter of fact, while a discrimination between the *iris setosa* and the other two plants emerges from the first set of plots, drawing a rule that can be applied to differetiate the *iris versicolor* from *the virginica* is quite a more challenging task. In the end, this is the objective of my analysis: **to classify a new flower as belonging to one of the three species starting from a set of the 4 types of measurements provided by the data frame**.
+One plant is linearly separable from the other 2; the latter are not easily separable from each other. This is the issue I have planned to solve with my work and that clearly emerges from the very first plots I have generated. Once graphically represented the flowers, I have then passed to look for a discriminant principle that allows to predict from the indipendent variable the dipendent variable.  My study is, therefore, devided into two parts: the first where the *iris setosa* peculiarity is outlined in comparison to the other two species; the second where I trace a distinction as clear as possible between the the other two classes, the *iris versicolor* and the *iris virginica*. In fact, as already stated, while a discrimination between the *iris setosa* and the other two plants emerges from the first set of plots, drawing a rule that can be applied to differetiate the *iris versicolor* from *the virginica* is quite a more challenging task. In the end, this is the objective of my analysis: **to classify a new flower as belonging to one of the three species starting from a set of its 4 types of measurements**.
 
-1. **HOW *IRIS SETOSA* DIFFERENT CHARACTERISTICS EASILY EMERGE FROM FIRST PLOTS**
+1. **HOW *IRIS SETOSA* CHARACTERISTICS EASILY DIFFERECIATE FROM THE OTHER TWO**
 
-The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. Spikes in the graphs variations to be pointed out. One key concept when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The histogram method can accept a few different arguments, but the most important two are:
+My analysis, then, starts showing and comparing the three species through histograms and scatterplots. The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. This kind of representation draws attention to the spikes appearing in the graphs. One key concept to take into account when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The histogram method can accept a few different arguments, but the most important two are:
 
 **x**: the data set to be displayed within the histogram.
 **bins**: the number of bins that the histogram should be divided into.
 
-Since histograms do not accept objects, my first step was to remove all non-numeric columns from the data set.
-
-My main point of reference for plotting histograms on the Fisher's Iris data set was [www.nickmccullum.com](https://www.nickmccullum.com/python-visualization/histogram/).
+My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PetalLenghtHistogram.png)
 
+
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PetalWidthHistogram.png)
+
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/SepalLenghtHistogram.png)
 
+
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/SepalWidthHistogram.png)
+
 
 </div>
 
@@ -121,7 +123,7 @@ The patterns or correlations can be either:
 *Strong or Weak*: A strong correlation has data points close together while a week correlation has data points that are further apart
 *Positive or Negative*: A positive correlation points up (both *x* and *y* values increasing) while a negative correlation points down (*x* and *y* values decreasing)
 
-My point of reference here for scatterplots and their usage is [www.visme.co](https://visme.co/blog/scatter-plot/)
+My point of reference here for scatterplots and their usage is [visme](https://visme.co/blog/scatter-plot/)
 
 + Sepal width and legth displayed.
 <div align="center">
