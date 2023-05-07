@@ -1,5 +1,7 @@
 # Analysis.py
-# This program summarizes my researches Fisher’s Iris data set'
+# This program summarizes my researches on 'Fisher’s Iris data set'
+# My aim is to display how the three species of flowers differentiate themselves on a statistical point of view
+# I will try to determinate a discriminanting rule to predict a species from its set of measurement
 # Author: Andrea Cignoni
 
 import pandas as pd

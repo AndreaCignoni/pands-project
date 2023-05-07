@@ -99,7 +99,7 @@ My analysis, then, starts showing and comparing the three species through histog
 **x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
-My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
+The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which allows where the species have more points in commons. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the alpha attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
@@ -112,10 +112,11 @@ My main point of reference for plotting histograms on the Fisher's Iris data set
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Width.png)
-
+![Screenshot](https://github.com/AndreaCignoni/mywork/blob/7c42d117895d01509536d94a37e90c404d34c55f/Sepal_Width.png)
 
 </div>
+
+As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginical* are almost overlying while the *iris setosa* stands nearly on its own in every histogram in every case. Therefore, **we can easily distinguish an *iris setosa* from the other two species plotting a single set of measures with an histogram**
 
 **Scatterplots** are developped attributing a different colour to each class and considering their petal/sepal width on the y axis and length on the x axis. In this way the similarities and differences between the two pairs of variables (lenght and width/ petals and sepals) are described in relation to the three species.
 The patterns or correlations can be either:
