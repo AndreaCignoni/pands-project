@@ -36,6 +36,8 @@ print("\n","As shown below, no missing values were found in the raw file:","\n",
 print(df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # HISTOGRAMS
+# Creating an histogram for each dimension which will be measured on the x axis
+# Trasparency achieved with alpha attribute: the iris setosa species stands on its own while the other two species are overlaid in every graph
 
 # 1. Plotting sepal lengths
 
@@ -112,8 +114,11 @@ plt.ylabel('Frequency')
 plt.show()
 
 # SCATTERPLOTS
+# Scatterplots used to graphically distinguish iris versicolor from iris virginica
+# iris setosa remains segrgated from the other two species as in the previous histograms
+# Plotting all the 6 possible combination of 2 dimensions scatterplots to identify where the the iris versicolor and the iris virginica are more visibly distinguished
 
-# select setosa and versicolor and virginica
+# select setosa and versicolor and virginica: 
 y = df.iloc[0:150, 4].values
 y = np.where(y == 'Iris-setosa', 0, 1)
 
@@ -121,7 +126,6 @@ y = np.where(y == 'Iris-setosa', 0, 1)
 
 X = df.iloc[0:150, [0, 2]].values
 
-# scaterplot lenght data
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],

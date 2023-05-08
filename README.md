@@ -90,7 +90,7 @@ Before proceeding to my actual analysis, I have *preprocessed* the data containe
 
 **EXPLORATORY DATA ANALYSIS** 
 
-One plant is linearly separable from the other 2; the latter are not easily separable from each other. This is the issue I have planned to solve with my work and that clearly emerges from the very first plots I have generated. Once graphically represented the flowers, I have then passed to look for a discriminant principle that allows to predict from the indipendent variable the dipendent variable.  My study is, therefore, devided into two parts: the first where the *iris setosa* peculiarity is outlined in comparison to the other two species; the second where I trace a distinction as clear as possible between the the other two classes, the *iris versicolor* and the *iris virginica*. In fact, as already stated, while a discrimination between the *iris setosa* and the other two plants emerges from the first set of plots, drawing a rule that can be applied to differetiate the *iris versicolor* from *the virginica* is quite a more challenging task. In the end, this is the objective of my analysis: **to classify a new flower as belonging to one of the three species starting from a set of its 4 types of measurements**.
+One plant is linearly separable from the other 2; the latter are not easily separable from each other. This is the issue I have planned to solve with my work and that clearly emerges from the very first plots I have generated. Once graphically represented the flowers, I have then passed to look for a discriminant principle that allows to predict from the independent variable the dependent variable.  My study is, therefore, divided into two parts: the first where the *iris setosa* peculiarity is outlined in comparison to the other two species; the second where I trace a distinction as clear as possible between the other two classes, the *iris versicolor* and the *iris virginica*. In fact, as already stated, while a discrimination between the *iris setosa* and the other two plants emerges from the first set of plots, drawing a rule that can be applied to differentiate the *iris versicolor* from *the virginica* is quite a more challenging task. In the end, this is the objective of my analysis: **to classify a new flower as belonging to one of the three species starting from a set of its 4 types of measurements**.
 
 1. **HOW *IRIS SETOSA* CHARACTERISTICS EASILY DIFFERECIATE FROM THE OTHER TWO**
 
@@ -99,7 +99,7 @@ My analysis, then, starts showing and comparing the three species through histog
 **x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
-The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which allows where the species have more points in commons. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the alpha attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
+The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which displays where the species have more features in common. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the alpha attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
@@ -116,8 +116,7 @@ The four histograms below are based on 2 variables each: one measurement and cla
 
 </div>
 
-As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginical* are almost overlying while the *iris setosa* stands nearly on its own in every histogram in every case. Therefore, **we can easily distinguish an *iris setosa* from the other two species plotting a single set of measures with an histogram**
-
+As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginica* have margins almost always overlying each other while the *iris setosa* constantly stands on its own in every histogram. Therefore, **we can easily distinguish an *iris setosa* from the other two species plotting a single set of measures with an histogram**.  
 **Scatterplots** are developped attributing a different colour to each class and considering their petal/sepal width on the y axis and length on the x axis. In this way the similarities and differences between the two pairs of variables (lenght and width/ petals and sepals) are described in relation to the three species.
 The patterns or correlations can be either:
 *Linear or Nonlinear*: A linear correlation forms a straight line in its data points while a non linear correlation might have a curve or other form within the data points
