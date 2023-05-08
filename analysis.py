@@ -7,7 +7,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sn
+import seaborn as sns
 
 # Reading and formatting the data set downloaded (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
 
@@ -126,12 +126,16 @@ y = np.where(y == 'Iris-setosa', 0, 1)
 
 X = df.iloc[0:150,[0, 2]].values
 
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Sepal length [cm]')
 plt.ylabel('Petal length [cm]')
@@ -143,12 +147,16 @@ plt.show()
 
 X = df.iloc[0:150,[1, 3]].values
 
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Sepal width [cm]')
 plt.ylabel('Petal width [cm]')
@@ -160,12 +168,16 @@ plt.show()
 
 X = df.iloc[0:150,[2, 3]].values
 
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Petal length [cm]')
 plt.ylabel('Petal width [cm]')
@@ -177,12 +189,16 @@ plt.show()
 
 X = df.iloc[0:150,[0, 1]].values
 
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Sepal length [cm]')
 plt.ylabel('Sepal width [cm]')
@@ -194,12 +210,16 @@ plt.show()
 
 X = df.iloc[0:150,[1, 2]].values
 
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Petal length [cm]')
 plt.ylabel('Sepal width [cm]')
@@ -211,12 +231,16 @@ plt.show()
 
 X = df.iloc[0:150,[0, 3]].values
 
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Petal width [cm]')
 plt.ylabel('Sepal length [cm]')
