@@ -219,7 +219,7 @@ plt.scatter(X[100:150, 0], X[100:150, 1],
             color='red', marker='*', label='Versicolor')
 
 plt.xlabel('Petal width [cm]')
-plt.ylabel('Sepal width [cm]')
+plt.ylabel('Sepal length [cm]')
 plt.legend(loc='upper right')
 
 plt.show()
