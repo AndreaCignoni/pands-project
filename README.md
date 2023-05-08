@@ -125,40 +125,46 @@ The patterns or correlations can be either:
 
 My point of reference here for scatterplots and their usage is [visme](https://visme.co/blog/scatter-plot/)
 
-+ Sepal width and length displayed.
++ Sepal width and length displayed;
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterSepalLengthWidth.png)
 </div>
 
-* Petal length and width displayed.
+* Petal length and width displayed;
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPetalLengthWidth.png)
 </div>
 
-- Sepal  and petal width displayed.
+- Sepal  and petal width displayed;
 <div align="center">
 
 ![Scatterplot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotWidth.png)
 </div>
 
-+ Petal and sepal length displayed.
++ Petal and sepal length displayed;
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotLength.png)
 </div>
 
-* Petal length and sepal width displayed.
+* Petal length and sepal width displayed;
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/9c78d7c01cdb97e81611f115df16663927180ace/ScatterPetalLengthSepalWidth.png)
 </div>
 
-- Petal width and length displayed.
+- Petal width and length displayed;
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/4f798f816751e49412110d6916acd7a4c390ea6c/ScatterPetalWidthSepalLength.png)
+</div>
+
++ Global overview of the four 1 dimension histograms and of the 6 combinations scatterplots in pair-plots.
+<div align="center">
+
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/5f7168d415c2a47cc296407586b28d11934d3150/PairPlots1.png)
 </div>
 
 </div>
