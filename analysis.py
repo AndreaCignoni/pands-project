@@ -223,3 +223,9 @@ plt.ylabel('Sepal length [cm]')
 plt.legend(loc='upper right')
 
 plt.show()
+
+# Generating a pairwise scatter plot with Seaborn to achieve a global overview of all 6 combinations of the 2 dimensions graphs
+
+sns.set_style("whitegrid")
+sns.pairplot(df, hue="class", height=1.5)
+plt.show()
