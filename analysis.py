@@ -36,6 +36,8 @@ print("\n","As shown below, no missing values were found in the raw file:","\n",
 print(df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # HISTOGRAMS
+# Creating an histogram for each dimension which will be measured on the x axis
+# Trasparency achieved with alpha attribute: the iris setosa species stands on its own while the other two species are overlaid in every graph
 
 # 1. Plotting sepal lengths
 
@@ -112,16 +114,18 @@ plt.ylabel('Frequency')
 plt.show()
 
 # SCATTERPLOTS
+# Scatterplots used to graphically distinguish iris versicolor from iris virginica
+# iris setosa remains segregated from the other two species as in the previous histograms
+# Plotting all the 6 possible combination of 2 dimensions scatterplots to identify where the the iris versicolor and the iris virginica are more visibly distinguished
 
-# select setosa and versicolor and virginica
+# select setosa and versicolor and virginica: 
 y = df.iloc[0:150, 4].values
 y = np.where(y == 'Iris-setosa', 0, 1)
 
 # 1. Sepal and petal length
 
-X = df.iloc[0:150, [0, 2]].values
+X = df.iloc[0:150,[0, 2]].values
 
-# scaterplot lenght data
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
@@ -133,13 +137,12 @@ plt.xlabel('Sepal length [cm]')
 plt.ylabel('Petal length [cm]')
 plt.legend(loc='upper left')
 
-# plt.show()
+plt.show()
 
 # 2. Sepal and petal width
 
-X = df.iloc[0:150, [1, 3]].values
+X = df.iloc[0:150,[1, 3]].values
 
-# scatterplot sepal and petal width data
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
@@ -151,13 +154,12 @@ plt.xlabel('Sepal width [cm]')
 plt.ylabel('Petal width [cm]')
 plt.legend(loc='upper right')
 
-# plt.show()
+plt.show()
 
 # 3. Petal width and length
 
-X = df.iloc[0:150, [2, 3]].values
+X = df.iloc[0:150,[2, 3]].values
 
-# scatterplot petal width and length data
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
@@ -169,13 +171,12 @@ plt.xlabel('Petal length [cm]')
 plt.ylabel('Petal width [cm]')
 plt.legend(loc='upper left')
 
-# plt.show()
+plt.show()
 
 # 4. Sepal width and length
 
-X = df.iloc[0:150, [0, 1]].values
+X = df.iloc[0:150,[0, 1]].values
 
-# scatterplot sepal width and length data
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
@@ -187,4 +188,38 @@ plt.xlabel('Sepal length [cm]')
 plt.ylabel('Sepal width [cm]')
 plt.legend(loc='upper right')
 
-# plt.show()
+plt.show()
+
+# 5. Petal length and sepal width
+
+X = df.iloc[0:150,[1, 2]].values
+
+plt.scatter(X[:50, 0], X[:50, 1],
+            color='blue', marker= 'o', label='Setosa')
+plt.scatter(X[50:100, 0], X[50:100, 1],
+            color='green', marker='s', label='Versicolor')
+plt.scatter(X[100:150, 0], X[100:150, 1],
+            color='red', marker='*', label='Versicolor')
+
+plt.xlabel('Petal length [cm]')
+plt.ylabel('Sepal width [cm]')
+plt.legend(loc='upper left')
+
+plt.show()
+
+# 6. Petal width and sepal length
+
+X = df.iloc[0:150,[0, 3]].values
+
+plt.scatter(X[:50, 0], X[:50, 1],
+            color='blue', marker= 'o', label='Setosa')
+plt.scatter(X[50:100, 0], X[50:100, 1],
+            color='green', marker='s', label='Versicolor')
+plt.scatter(X[100:150, 0], X[100:150, 1],
+            color='red', marker='*', label='Versicolor')
+
+plt.xlabel('Petal width [cm]')
+plt.ylabel('Sepal width [cm]')
+plt.legend(loc='upper right')
+
+plt.show()
