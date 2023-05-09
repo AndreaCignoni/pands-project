@@ -1,13 +1,13 @@
 # Analysis.py
 # This program summarizes my researches on 'Fisher’s Iris data set'
 # My aim is to display how the three species of flowers differentiate themselves on a statistical point of view
-# I will try to determinate a discriminanting rule to predict a species from its set of measurement
+# I will outline a discriminanting principle to predict a species from its set of measurement
 # Author: Andrea Cignoni
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sn
+import seaborn as sns
 
 # Reading and formatting the data set downloaded (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
 
@@ -115,7 +115,7 @@ plt.show()
 
 # SCATTERPLOTS
 # Scatterplots used to graphically distinguish iris versicolor from iris virginica
-# iris setosa remains segrgated from the other two species as in the previous histograms
+# iris setosa remains segregated from the other two species as in the previous histograms
 # Plotting all the 6 possible combination of 2 dimensions scatterplots to identify where the the iris versicolor and the iris virginica are more visibly distinguished
 
 # select setosa and versicolor and virginica: 
@@ -124,71 +124,132 @@ y = np.where(y == 'Iris-setosa', 0, 1)
 
 # 1. Sepal and petal length
 
-X = df.iloc[0:150, [0, 2]].values
+X = df.iloc[0:150,[0, 2]].values
+
+# selecting rows and distinguishing flowers by colours
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Sepal length [cm]')
 plt.ylabel('Petal length [cm]')
 plt.legend(loc='upper left')
 
-# plt.show()
+plt.show()
 
 # 2. Sepal and petal width
 
-X = df.iloc[0:150, [1, 3]].values
+X = df.iloc[0:150,[1, 3]].values
 
-# scatterplot sepal and petal width data
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Sepal width [cm]')
 plt.ylabel('Petal width [cm]')
 plt.legend(loc='upper right')
 
-# plt.show()
+plt.show()
 
 # 3. Petal width and length
 
-X = df.iloc[0:150, [2, 3]].values
+X = df.iloc[0:150,[2, 3]].values
 
-# scatterplot petal width and length data
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Petal length [cm]')
 plt.ylabel('Petal width [cm]')
 plt.legend(loc='upper left')
 
-# plt.show()
+plt.show()
 
 # 4. Sepal width and length
 
-X = df.iloc[0:150, [0, 1]].values
+X = df.iloc[0:150,[0, 1]].values
 
-# scatterplot sepal width and length data
+# selecting rows and distinguishing flowers by colours
+
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
 plt.scatter(X[50:100, 0], X[50:100, 1],
             color='green', marker='s', label='Versicolor')
 plt.scatter(X[100:150, 0], X[100:150, 1],
-            color='red', marker='*', label='Versicolor')
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
 
 plt.xlabel('Sepal length [cm]')
 plt.ylabel('Sepal width [cm]')
 plt.legend(loc='upper right')
 
-# plt.show()
+plt.show()
+
+# 5. Petal length and sepal width
+
+X = df.iloc[0:150,[1, 2]].values
+
+# selecting rows and distinguishing flowers by colours
+
+plt.scatter(X[:50, 0], X[:50, 1],
+            color='blue', marker= 'o', label='Setosa')
+plt.scatter(X[50:100, 0], X[50:100, 1],
+            color='green', marker='s', label='Versicolor')
+plt.scatter(X[100:150, 0], X[100:150, 1],
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
+
+plt.xlabel('Petal length [cm]')
+plt.ylabel('Sepal width [cm]')
+plt.legend(loc='upper left')
+
+plt.show()
+
+# 6. Petal width and sepal length
+
+X = df.iloc[0:150,[0, 3]].values
+
+# selecting rows and distinguishing flowers by colours
+
+plt.scatter(X[:50, 0], X[:50, 1],
+            color='blue', marker= 'o', label='Setosa')
+plt.scatter(X[50:100, 0], X[50:100, 1],
+            color='green', marker='s', label='Versicolor')
+plt.scatter(X[100:150, 0], X[100:150, 1],
+            color='red', marker='*', label='Virginica')
+
+# Generating scatterplot
+
+plt.xlabel('Petal width [cm]')
+plt.ylabel('Sepal length [cm]')
+plt.legend(loc='upper right')
+
+plt.show()
+
+# Generating a pairwise scatter plot with Seaborn to achieve a global overview of all 6 combinations of the 2 dimensions graphs
+
+sns.set_style("whitegrid")
+sns.pairplot(df, hue="class", height=1.5)
+plt.show()

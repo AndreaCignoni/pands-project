@@ -99,7 +99,7 @@ My analysis, then, starts showing and comparing the three species through histog
 **x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
-The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which displays where the species have more features in common. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the alpha attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
+The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which clearly display where the species have more features in common. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the alpha attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
@@ -125,28 +125,47 @@ The patterns or correlations can be either:
 
 My point of reference here for scatterplots and their usage is [visme](https://visme.co/blog/scatter-plot/)
 
-+ Sepal width and legth displayed.
+
++ Sepal width and length displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterSepalLengthWidth.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/dfb0e62aa6a4dd735bdfb7559febee03402f44b0/SepalLengthWidth.png)
 </div>
 
-* Petal length and width displayed.
+* Petal length and width displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPetalLengthWidth.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/b58ed4ae833ee5a392e0c0e2f5f0931a8b76dc70/PetalLengthWidth.png)
 </div>
 
-- Sepal  and petal width compared.
+- Sepal and petal width displayed;
 <div align="center">
 
-![Scatterplot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotWidth.png)
+![Scatterplot](https://github.com/AndreaCignoni/pands-project/blob/b7fc59b5dcad86110cc8297bbbcaada4cc4b6b7b/PetalSepalWidth.png)
 </div>
 
-* Petal and sepal legth compared.
++ Petal and sepal length displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ScatterPlotLength.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/78e075090160404148053bd550e5101deb697024/PetalSepalLength.png)
+</div>
+
+- Sepal length and petal width displayed;
+<div align="center">
+
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/bfced1b2a94b372551ed265ab76abdfca48b2b94/SepalLengthPetalWidth.png)
+</div>
+
+* Petal length and sepal width displayed;
+<div align="center">
+
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/1099840cc4b101f026c7f73da87ee3e65bedeb02/SepalWidthPetalLength.png)
+</div>
+
++ Global overview of the four 1 dimension histograms and of the 6 combinations scatterplots in pair-plots.
+<div align="center">
+
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/5f7168d415c2a47cc296407586b28d11934d3150/PairPlots1.png)
 </div>
 
 </div>
