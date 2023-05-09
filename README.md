@@ -116,15 +116,14 @@ The four histograms below are based on 2 variables each: one measurement and cla
 
 </div>
 
-As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginica* have margins almost always overlying each other while the *iris setosa* constantly stands on its own in every histogram. Therefore, **we can easily distinguish an *iris setosa* from the other two species plotting a single set of measures with an histogram**.  
-**Scatterplots** are developped attributing a different colour to each class and considering their petal/sepal width on the y axis and length on the x axis. In this way the similarities and differences between the two pairs of variables (lenght and width/ petals and sepals) are described in relation to the three species.
-The patterns or correlations can be either:
-*Linear or Nonlinear*: A linear correlation forms a straight line in its data points while a non linear correlation might have a curve or other form within the data points
-*Strong or Weak*: A strong correlation has data points close together while a week correlation has data points that are further apart
-*Positive or Negative*: A positive correlation points up (both *x* and *y* values increasing) while a negative correlation points down (*x* and *y* values decreasing)
-
-My point of reference here for scatterplots and their usage is [visme](https://visme.co/blog/scatter-plot/)
-
+As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginica* have margins almost always overlying each other while the *iris setosa* constantly stands on its own. Therefore, with the use of an histogram we can easily discriminate an *iris setosa* from the other two species from a single set of measurements  .
+But how can we distinguish an *iris versicolor* from an *iris virginica* or viceversa? To answer this question, I have recurred to the help of *scatterplots*.
+2. ***IRIS VERSICOLOR* AND *IRIS VIRGINICA*’S DISCRIMINATION
+The *scatterplots* I have generated have been developed attributing a different colour to each class, blue for the *iris setosa*,  green for the *iris versicolor* and red for the *iris virginica* respectively. In this way the similarities and differences between the two pairs of variables (length and width/ petals and sepals) are clearly displayed in relation to the three species. The patterns or correlations can be either *Linear* or *Nonlinear*, *Strong* or *Weak*, *Positive* or *Negative*: 
+•	*Linear* or *Nonlinear*: A *linear correlation* forms a straight line in its data points while a *non linear* correlation might have a curve or other form within the data points;
+•	*Strong* or *Weak*: A *strong* correlation has data points close together while a *weak* correlation has data points that are further apart;
+•	*Positive* or *Negative*: A *positive*e correlation points up (both x and y values increasing) while a *negative* correlation points down (x and y values decreasing).  
+The following scatterplots show that a *linear* correlation separate the *iris setosa* from the other two species that are always *non linearly* separated. Therefore, in order to discriminate the *iris versicolor* from the *iris virginica* we need to recur to the second distinction above mentioned, namely in which graph the patterns plotted are *weaker*. For this purpose, I take as an example the second *scatterplot* below reported where the two dimensions taken into consideration are the *petal length* and the *petal width*.  
 
 + Sepal width and length displayed;
 <div align="center">
@@ -162,7 +161,9 @@ My point of reference here for scatterplots and their usage is [visme](https://v
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/1099840cc4b101f026c7f73da87ee3e65bedeb02/SepalWidthPetalLength.png)
 </div>
 
-+ Global overview of the four 1 dimension histograms and of the 6 combinations scatterplots in pair-plots.
+My point of reference here for *scatterplots* and their usage is [visme](https://visme.co/blog/scatter-plot/).  
+To achieve a global overview including the four one-dimension histograms and the 6 combinations of the two-dimensions scatterplots, I have here plotted the whole dataset in pairplots. Thanks to the whitegrid on which the data are displayed, this format allows a further analysis of the above indicated scatterplot where the correlation between the three species is outlined on the *petal length* and the *petal width*.
+
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/5f7168d415c2a47cc296407586b28d11934d3150/PairPlots1.png)
