@@ -174,7 +174,7 @@ The pairplot function creates a grid of axes such that each variable in data wil
 
 <div align="center">
 
-![Screenshot]()
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/4ab8abec43a2a4162c99d2d534049a08ed677c59/Focus.png)
 </div>
 
 </div>
