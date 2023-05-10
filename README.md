@@ -94,12 +94,12 @@ One plant is linearly separable from the other 2; the latter are not easily sepa
 
 1. **HOW *IRIS SETOSA* CHARACTERISTICS EASILY DIFFERECIATE FROM THE OTHER TWO**
 
-My analysis, then, starts showing and comparing the three species through histograms and scatterplots. The **histograms** show the *frequency distribution* of a data set and in this case help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. This kind of representation draws attention to the spikes appearing in the graphs. One key concept to take into account when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The histogram method can accept a few different arguments, but the most important two are:
+My analysis, then, starts showing and comparing the three species through histograms and scatterplots. The **histograms** show the *frequency distribution* of a data set and, in this case, help to visualize which class of flower presents data in *normal distribution* (a bell shaped curve) and which not. This kind of representation draws attention to the spikes appearing in the graphs. One key concept to take into account when working with histograms is the idea of *bins* - how many parts the total range of the data set is divided into. Changing the number of *bins* in a histogram does not change the data set. It only changes the appearance of the data in the histogram. The histogram method can accept a few different arguments, but the most important two are:
 
 **x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
-The four histograms below are based on 2 variables each: one measurement and a class of species. The three flowers are plotted using the transparency technique which clearly display where the species have more features in common. *Iris setosa* is plotted in red, *iris versicolor* in green and *iris virginica* in red. When creating a plot of a graph, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the *alpha* attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
+The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which clearly display where the species have more features in common. *Iris setosa* is plotted in red, *iris versicolor* in green and *iris virginica* in red. When creating a plot of a graph, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the *alpha* attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
@@ -116,14 +116,16 @@ The four histograms below are based on 2 variables each: one measurement and a c
 
 </div>
 
-As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginica* have margins almost always overlying each other while the *iris setosa* constantly stands on its own. Therefore, with the use of an histogram we can easily discriminate an *iris setosa* from the other two species from a single set of measurements  .
-But how can we distinguish an *iris versicolor* from an *iris virginica* or viceversa? To answer this question, I have recurred to the help of *scatterplots*.
-2. ***IRIS VERSICOLOR* AND *IRIS VIRGINICA*’S DISCRIMINATION
-The *scatterplots* I have generated have been developed attributing a different colour to each class, blue for the *iris setosa*,  green for the *iris versicolor* and red for the *iris virginica* respectively. In this way the similarities and differences between the two pairs of variables (length and width/ petals and sepals) are clearly displayed in relation to the three species. The patterns or correlations can be either *Linear* or *Nonlinear*, *Strong* or *Weak*, *Positive* or *Negative*: 
-•	*Linear* or *Nonlinear*: A *linear correlation* forms a straight line in its data points while a *non linear* correlation might have a curve or other form within the data points;
-•	*Strong* or *Weak*: A *strong* correlation has data points close together while a *weak* correlation has data points that are further apart;
-•	*Positive* or *Negative*: A *positive*e correlation points up (both x and y values increasing) while a *negative* correlation points down (x and y values decreasing).  
-The following scatterplots show that a *linear* correlation separate the *iris setosa* from the other two species that are always *non linearly* separated. Therefore, in order to discriminate the *iris versicolor* from the *iris virginica* we need to recur to the second distinction above mentioned, namely in which graph the patterns plotted are *weaker*. For this purpose, I take as an example the second *scatterplot* below reported where the two dimensions taken into consideration are the *petal length* and the *petal width*.  
+As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginica* are almost always overlying each other while the *iris setosa* constantly stands on its own. Therefore, with the use of an histogram we can easily discriminate an *iris setosa* from the other two species using one single variables of the measurements.
+But how can we distinguish an *iris versicolor* from an *iris virginica* or viceversa? To answer this question, the set of misurements must be 2 and I have recurred to the help of *scatterplots* to display a two dimension graph.
+
+2. ***IRIS VERSICOLOR* AND *IRIS VIRGINICA*’S **DISCRIMINATION**
+
+As for the *histograms*, I have attributed a different colour to each class of plant: blue for the *iris setosa*,  green for the *iris versicolor* and red for the *iris virginica* respectively. In this way, the similarities and differences between the two pairs of variables (length and width/ petals and sepals) can be clearly displayed for each of the three species. The patterns or correlations created are either *Linear* or *Nonlinear*, *Strong* or *Weak*, *Positive* or *Negative*: 
+•	*Linear* or *Nonlinear*: a *linear correlation* forms a straight line in its data points while a *non linear* correlation might have a curve or other form within the data points;
+•	*Strong* or *Weak*: a *strong* correlation has data points close together while a *weak* correlation has data points that are further apart;
+•	*Positive* or *Negative*: a *positive*e correlation points up (both x and y values increasing) while a *negative* correlation points down (x and y values decreasing).  
+The following scatterplots show that a *linear* correlation separate the *iris setosa* from the other two species that are always *non linearly* separated. Therefore, in order to discriminate the *iris versicolor* from the *iris virginica* we need to recur to the second discrimination mentioned above, namely searching the graph where the patterns plotted are *weaker* and the *iris versicolor* and the *iris virginica* are more apart. 
 
 + Sepal width and length displayed;
 <div align="center">
@@ -161,20 +163,26 @@ The following scatterplots show that a *linear* correlation separate the *iris s
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/1099840cc4b101f026c7f73da87ee3e65bedeb02/SepalWidthPetalLength.png)
 </div>
 
-My point of reference here for *scatterplots* and their usage is [visme](https://visme.co/blog/scatter-plot/).  
-To achieve a global overview including the four one-dimension histograms and the 6 combinations of the two-dimensions scatterplots, I have here plotted the whole dataset in pairs plot. The white grid on which the data are displayed has allowed me to analyse the above indicated scatterplot - where the correlation between the three species is outlined over the petal length  width measures- with the necessary landmarks to visually isolate the *iris virginica* from the *iris versicolor*.
+As can be easily noticed, the second *scatterplot*, where the dimensions taken into consideration are the *petal length* and the *petal width*, is the one that describe a clearer distinction between the two classes of flowers. However, to develop the necessary system of reference to assess a form of principle to isolate one class of flower from the other two, I have drawn on *pairs plot* and its grids.For plotting *scatterplots* and comprehend their usage, my source here has been [visme](https://visme.co/blog/scatter-plot/).  
+The *pairs plot* below display a global overview of all the plots so far shown and,  since there are 4 measurements, a 4x4 plot has been created with 6 bidimensional mirroring *scatterplots* and 4 monodimensional histograms. The white grid on which the data are disployed allow a deeper analysis of the above indicated *scatterplot* - the one generated over the *petal length* and the *petal  width* measures- giving the necessary landmarks to  isolate the *iris virginica* from the *iris versicolor*.
 
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/PairPlots.png)
 </div>
 
-In order to generate the above plot and learn the most relevant *Seaborn*'s features, I have followed [seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.pairplot.html). The *Seaborn Pairplot* allows us to plot pairwise relationships between variables within a dataset. The pairs plot builds on two basic figures, the histogram and the scatter plot. The histogram on the diagonal allows us to see the distribution of a single variable while the scatter plots on the upper and lower triangles show the relationship (or lack thereof) between two variables. This creates a nice visualisation and helps us understand the data by summarising a the whole *Fisher's Iris Data Set* in a single figure.  
-The pairplot function creates a grid of axes such that each variable in data will by shared in the y-axis across a single row and in the x-axis across a single column. Because there are 4 measurements, a 4x4 plot has been created. At this point, I can pass to draw my focus on the *scatterplot* which shows a *weaker* correlation between the *iris virginica* and *iris versicolor*.
+In order to generate the above plot and learn the most relevant *Seaborn*'s features, I have followed [seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.pairplot.html). The *Seaborn Pairplot* function is used to plot pairwise relationships between variables within a dataset. The pairs plot builds on two basic figures, the *histogram* and the *scatter plot*. The *histogram* on the diagonal allows us to see the distribution of a single variable while the *scatter plots* on the upper and lower triangles show the relationship (or lack thereof) between two variables. This creates a nice visualisation and helps us understand the data by summarising the whole *Fisher's Iris Data Set* in a single figure.  
+The *pairplot* method can create also a grid of axes such that each variable in data will by shared in the y-axis across a single row and in the x-axis across a single column. At this point, I can pass to examine the *scatterplot* whith the *weaker* correlation between the *iris virginica* and *iris versicolor*.
 
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/4ab8abec43a2a4162c99d2d534049a08ed677c59/Focus.png)
 </div>
+
+# Using the measures on y, x axis and the lines dividing data on the above *scatterplot* we can build a simple model through a 3 if-else conditions statement to classify each flower type which is also the aim of my research:  
+
+1. IF PETAL WIDTH IS < THAN 2 IS SETOSA
+2. ELIF PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
+3. ELSE IS VIRGINICA
 
 </div>

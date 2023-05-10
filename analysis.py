@@ -257,6 +257,8 @@ plt.show()
 
 # Scatter plot based on petal length and width show a weaker correlation between iris virginica and iris versicolor
 # Using measures on y, x axis and lines drawn on the above said scatterplot
-# we can build a simple model through if-else conditions to classify the flower types:
-# IF PETAL WIDTH IS ≤ TO 2 CM AND ≥ THAN 1 CM AND 
+# we can build a simple model through a 3 if-else conditions statement to classify each flower type:
+# 1. IF PETAL WIDTH IS < THAN 2 IS SETOSA
+# 2. ELIF PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND 
 # PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
+# 3. ELSE IS VIRGINICA
