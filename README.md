@@ -99,7 +99,7 @@ My analysis, then, starts showing and comparing the three species through histog
 **x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
-The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which clearly display where the species have more features in common. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the *alpha* attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
+The four histograms below are based on 2 variables each: one measurement and a class of species. The three flowers are plotted using the transparency technique which clearly display where the species have more features in common. *Iris setosa* is plotted in red, *iris versicolor* in green and *iris virginica* in red. When creating a plot of a graph, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the *alpha* attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
@@ -109,10 +109,10 @@ The four histograms below are based on 2 variables each: one measurement and cla
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/50345098de351dcba6c3066caef594e990c08046/Petal_Width.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Length.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/Sepal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/7c42d117895d01509536d94a37e90c404d34c55f/Sepal_Width.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/Sepal_Width.png)
 
 </div>
 
@@ -162,11 +162,19 @@ The following scatterplots show that a *linear* correlation separate the *iris s
 </div>
 
 My point of reference here for *scatterplots* and their usage is [visme](https://visme.co/blog/scatter-plot/).  
-To achieve a global overview including the four one-dimension histograms and the 6 combinations of the two-dimensions scatterplots, I have here plotted the whole dataset in pairplots. Thanks to the whitegrid on which the data are displayed, this format allows a further analysis of the above indicated scatterplot where the correlation between the three species is outlined on the *petal length* and the *petal width*.
+To achieve a global overview including the four one-dimension histograms and the 6 combinations of the two-dimensions scatterplots, I have here plotted the whole dataset in pairs plot. The white grid on which the data are displayed has allowed me to analyse the above indicated scatterplot - where the correlation between the three species is outlined over the petal length  width measures- with the necessary landmarks to visually isolate the *iris virginica* from the *iris versicolor*.
 
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/5f7168d415c2a47cc296407586b28d11934d3150/PairPlots1.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/PairPlots.png)
+</div>
+
+In order to generate the above plot and learn the most relevant *Seaborn*'s features, I have followed [seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.pairplot.html). The *Seaborn Pairplot* allows us to plot pairwise relationships between variables within a dataset. The pairs plot builds on two basic figures, the histogram and the scatter plot. The histogram on the diagonal allows us to see the distribution of a single variable while the scatter plots on the upper and lower triangles show the relationship (or lack thereof) between two variables. This creates a nice visualisation and helps us understand the data by summarising a the whole *Fisher's Iris Data Set* in a single figure.  
+The pairplot function creates a grid of axes such that each variable in data will by shared in the y-axis across a single row and in the x-axis across a single column. Because there are 4 measurements, a 4x4 plot has been created. At this point, I can pass to draw my focus on the *scatterplot* which shows a *weaker* correlation between the *iris virginica* and *iris versicolor*.
+
+<div align="center">
+
+![Screenshot]()
 </div>
 
 </div>
