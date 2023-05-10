@@ -47,9 +47,9 @@ versicolor = df[df['class'] == 'Iris-versicolor']['sepal_length']
 virginica = df[df['class'] == 'Iris-virginica']['sepal_length']
 
 # plot histogram
-plt.hist(setosa, alpha=0.5, label='setosa')
-plt.hist(versicolor, alpha=0.5, label='versicolor')
-plt.hist(virginica, alpha=0.5, label='virginica')
+plt.hist(setosa, color='blue', alpha=0.5, label='setosa')
+plt.hist(versicolor, color='green', alpha=0.5, label='versicolor')
+plt.hist(virginica, color='red', alpha=0.5, label='virginica')
 
 plt.legend(loc='upper right')
 plt.title('Sepal Length Histogram')
@@ -65,9 +65,9 @@ versicolor = df[df['class'] == 'Iris-versicolor']['sepal_width']
 virginica = df[df['class'] == 'Iris-virginica']['sepal_width']
 
 # plot histogram
-plt.hist(setosa, alpha=0.5, label='setosa')
-plt.hist(versicolor, alpha=0.5, label='versicolor')
-plt.hist(virginica, alpha=0.5, label='virginica')
+plt.hist(setosa, color='blue', alpha=0.5, label='setosa')
+plt.hist(versicolor, color='green', alpha=0.5, label='versicolor')
+plt.hist(virginica, color='red', alpha=0.5, label='virginica')
 
 plt.legend(loc='upper right')
 plt.title('Sepal Width Histogram')
@@ -84,9 +84,9 @@ versicolor = df[df['class'] == 'Iris-versicolor']['petal_length']
 virginica = df[df['class'] == 'Iris-virginica']['petal_length']
 
 # plot histogram
-plt.hist(setosa, alpha=0.5, label='setosa')
-plt.hist(versicolor, alpha=0.5, label='versicolor')
-plt.hist(virginica, alpha=0.5, label='virginica')
+plt.hist(setosa, color='blue', alpha=0.5, label='setosa')
+plt.hist(versicolor, color='green', alpha=0.5, label='versicolor')
+plt.hist(virginica, color='red', alpha=0.5, label='virginica')
 
 plt.legend(loc='upper right')
 plt.title('Petal Length Histogram')
@@ -103,9 +103,9 @@ versicolor = df[df['class'] == 'Iris-versicolor']['petal_width']
 virginica = df[df['class'] == 'Iris-virginica']['petal_width']
 
 # plot histogram
-plt.hist(setosa, alpha=0.5, label='setosa')
-plt.hist(versicolor, alpha=0.5, label='versicolor')
-plt.hist(virginica, alpha=0.5, label='virginica')
+plt.hist(setosa, color ='blue', alpha=0.5, label='setosa')
+plt.hist(versicolor, color='green', alpha=0.5, label='versicolor')
+plt.hist(virginica, color='red', alpha=0.5, label='virginica')
 
 plt.legend(loc='upper right')
 plt.title('Petal Width Histogram')
@@ -248,8 +248,15 @@ plt.legend(loc='upper right')
 
 plt.show()
 
-# Generating a pairwise scatter plot with Seaborn to achieve a global overview of all 6 combinations of the 2 dimensions graphs
+# Pairwise scatter plots generated with Seaborn to achieve a global overview of all 6 combinations of the 2 dimensions graphs
+# using a whitegrid pattern to establish a discrimination principle between iris virginica and iris versicolor
 
 sns.set_style("whitegrid")
-sns.pairplot(df, hue="class", height=1.5)
+sns.pairplot(df, hue="class", palette= ["blue","green","red"], markers=["o","s","*"], height=1.5)
 plt.show()
+
+# Scatter plot based on petal length and width show a weaker correlation between iris virginica and iris versicolor
+# Using measures on y, x axis and lines drawn on the above said scatterplot
+# we can build a simple model through if-else conditions to classify the flower types:
+# IF PETAL WIDTH IS ≤ TO 2 CM AND ≥ THAN 1 CM AND 
+# PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
