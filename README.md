@@ -99,14 +99,14 @@ My analysis, then, starts showing and comparing the three species through histog
 **x**: the data set to be displayed within the histogram;  
 **bins**: the number of bins that the histogram should be divided into.
 
-The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which clearly display where the species have more features in common. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the alpha attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
+The four histograms below are based on 2 variables each: one measurement and class of species. The three flowers are plotted using the transparency technique which clearly display where the species have more features in common. When creating a plot of a graph, by default, *Matplotlib* have the default transparency set at 1. However, this transparency can be adjusted using the *alpha* attribute at 0.5, as in my case, or at 0.25. My main point of reference for plotting histograms on the Fisher's Iris data set is [nickmccullum](https://www.nickmccullum.com/python-visualization/histogram/).
 
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Petal_Length.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/50345098de351dcba6c3066caef594e990c08046/Petal_Length.png)
 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Petal_Width.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/50345098de351dcba6c3066caef594e990c08046/Petal_Width.png)
 
 
 ![Screenshot](https://github.com/AndreaCignoni/mywork/blob/96002dd96e37b61c92de23a1635a2ee4b6cd5e8e/Sepal_Length.png)
