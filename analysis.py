@@ -126,7 +126,9 @@ plt.show()
 # Values attribute added to return the Numpy representation of the two dimension array to manipulate it as a list
 X = df.iloc[0:150,[0, 2]].values
 
-# passing two arguments as 0 and 1 to variable X and distinguishing flowers by colours and forms
+# Passing data from first dimension "sepal_length" [:,0] and second dimension "petal_length" [:,1] to variable X:
+# in fact, in this case, the "x" and "y" of the graph are both from X.
+# Plotting flowers by colours and markers
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')

@@ -119,7 +119,7 @@ The four histograms below are based on 2 variables each: one measurement and cla
 As highlighted by the above four graphs, the shapes of the *iris versicolor* and of the *iris virginica* are almost always overlying each other while the *iris setosa* constantly stands on its own. Therefore, with the use of an histogram we can easily discriminate an *iris setosa* from the other two species using one single variables of the measurements.
 But how can we distinguish an *iris versicolor* from an *iris virginica* or viceversa? To answer this question, the set of misurements must be 2 and I have recurred to the help of *scatterplots* to display a two dimension graph.
 
-2. ***IRIS VERSICOLOR* AND *IRIS VIRGINICA*’S **DISCRIMINATION**
+2. ***IRIS VERSICOLOR* AND *IRIS VIRGINICA*’S DISCRIMINATION**
 
 As for the *histograms*, I have attributed a different colour to each class of plant: blue for the *iris setosa*,  green for the *iris versicolor* and red for the *iris virginica* respectively. In this way, the similarities and differences between the two pairs of variables (length and width/ petals and sepals) can be clearly displayed for each of the three species. The patterns or correlations created are either *Linear* or *Nonlinear*, *Strong* or *Weak*, *Positive* or *Negative*: 
 •	*Linear* or *Nonlinear*: a *linear correlation* forms a straight line in its data points while a *non linear* correlation might have a curve or other form within the data points;
@@ -179,12 +179,12 @@ The *pairplot* method can create also a grid of axes such that each variable in 
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/4ab8abec43a2a4162c99d2d534049a08ed677c59/Focus.png)
 </div>
 
-# Using the measures on y, x axis and the lines dividing data on the above *scatterplot* we can build a simple model through a 3 if-else conditions statement to classify each flower type which is also the aim of my research:  
+**Using the measures on y, x axis and the lines dividing data on the above *scatterplot* we can build a simple model through a 3 if-else conditions statement to classify each flower type which is also the aim of my research:**  
 
-1. IF PETAL WIDTH AND PETAL LENGTH ≤ THAN 1 IS SETOSA
-2. ELIF PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND 
-PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
-3. ELSE IS VIRGINICA  
+1. **IF** PETAL WIDTH AND PETAL LENGTH ≤ THAN 1 IS *SETOSA*
+2. **ELIF** PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND 
+PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS *VERSICOLOR*
+3. **ELSE** IS *VIRGINICA*
 
 This Boolean expression is far from perfect and the error margin is still high. In fact, as the above plot shows, the *iris versicolor* and the *iris virginica*'s data are still intertwined and not so easily separable from one and another. However, this demonstration is meant to give a partial explanation of why this dataset, created in 1936, has been so long studied and why it is still used to implement some of the commonly used algorithms in machine learning. My efforts through this analysis have been directed to recognize the patterns which emerge from the iris measurements and, in the end, once identified a possible principle for discriminating the three species, use it to make predictions about those data with a reasonable margin of error.  
 </div>
