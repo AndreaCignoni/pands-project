@@ -163,16 +163,16 @@ The following scatterplots show that a *linear* correlation separate the *iris s
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/1099840cc4b101f026c7f73da87ee3e65bedeb02/SepalWidthPetalLength.png)
 </div>
 
-As can be easily noticed, the second *scatterplot*, where the dimensions taken into consideration are the *petal length* and the *petal width*, is the one that describe a clearer distinction between the two classes of flowers. However, to develop the necessary system of reference to assess a form of principle to isolate one class of flower from the other two, I have drawn on *pairs plot* and its grids.For plotting *scatterplots* and comprehend their usage, my source here has been [visme](https://visme.co/blog/scatter-plot/).  
-The *pairs plot* below display a global overview of all the plots so far shown and,  since there are 4 measurements, a 4x4 plot has been created with 6 bidimensional mirroring *scatterplots* and 4 monodimensional histograms. The white grid on which the data are disployed allow a deeper analysis of the above indicated *scatterplot* - the one generated over the *petal length* and the *petal  width* measures- giving the necessary landmarks to  isolate the *iris virginica* from the *iris versicolor*.
+As can be easily noticed, the second *scatterplot*, where the dimensions taken into consideration are the *petal length* and the *petal width*, is the one that describe a clearer distinction between the two classes of flowers. However, to develop the necessary system of reference to assess a form of principle to isolate one class of flower from the other two, I have drawn on *pairs plot* and its grids. For plotting *scatterplots* and comprehend their usage, my source here has been [visme](https://visme.co/blog/scatter-plot/).  
+The *pairs plot* below display a global overview of all the plots so far shown and,  since there are 4 measurements, a 4x4 plot has been created with 6 bidimensional mirroring *scatterplots* and 4 one-dimensional histograms. The white grid on which the data are deployed allow a deeper analysis of the above indicated *scatterplot* - the one generated over the *petal length* and the *petal  width* measures- giving the necessary landmarks to  isolate the *iris virginica* from the *iris versicolor*.
 
 <div align="center">
 
 ![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/PairPlots.png)
 </div>
 
-In order to generate the above plot and learn the most relevant *Seaborn*'s features, I have followed [seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.pairplot.html). The *Seaborn Pairplot* function is used to plot pairwise relationships between variables within a dataset. The pairs plot builds on two basic figures, the *histogram* and the *scatter plot*. The *histogram* on the diagonal allows us to see the distribution of a single variable while the *scatter plots* on the upper and lower triangles show the relationship (or lack thereof) between two variables. This creates a nice visualisation and helps us understand the data by summarising the whole *Fisher's Iris Data Set* in a single figure.  
-The *pairplot* method can create also a grid of axes such that each variable in data will by shared in the y-axis across a single row and in the x-axis across a single column. At this point, I can pass to examine the *scatterplot* whith the *weaker* correlation between the *iris virginica* and *iris versicolor*.
+In order to generate the above plot and learn the most relevant *Seaborn*'s features, I have followed [seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.pairplot.html). The *Seaborn Pairplot* function is used to plot pairwise relationships between variables within a dataset. The pairs plot builds on two basic figures, the *histogram* and the *scatter plot*. The *histogram* on the diagonal allows us to see the distribution of a single variable while the *scatter plots* on the upper and lower triangles show the relationship (or lack thereof) between two variables. This creates a nice visualisation and helps understand the data by summarising the whole *Fisher's Iris Data Set* in a single figure.  
+The *pairplot* method can create also a grid of axes such that each variable in data are shared in the y-axis across a single row and in the x-axis across a single column. At this point, I can pass to examine the *scatterplot* with the *weaker* correlation between the *iris virginica* and *iris versicolor*.
 
 <div align="center">
 
@@ -181,8 +181,10 @@ The *pairplot* method can create also a grid of axes such that each variable in 
 
 # Using the measures on y, x axis and the lines dividing data on the above *scatterplot* we can build a simple model through a 3 if-else conditions statement to classify each flower type which is also the aim of my research:  
 
-1. IF PETAL WIDTH IS < THAN 2 IS SETOSA
-2. ELIF PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
-3. ELSE IS VIRGINICA
+1. IF PETAL WIDTH AND PETAL LENGTH ≤ THAN 1 IS SETOSA
+2. ELIF PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND 
+PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
+3. ELSE IS VIRGINICA  
 
+This Boolean expression is far from perfect and the error margin is still high. In fact, as the above plot shows, the *iris versicolor* and the *iris virginica*'s data are still intertwined and not so easily separable from one and another. However, this demonstration is meant to give a partial explanation of why this dataset, created in 1936, has been so long studied and why it is still used to implement some of the commonly used algorithms in machine learning. My efforts through this analysis have been directed to recognize the patterns which emerge from the iris measurements and, in the end, once identified a possible principle for discriminating the three species, use it to make predictions about those data with a reasonable margin of error.  
 </div>

@@ -1,7 +1,7 @@
 # Analysis.py
 # This program summarizes my researches on 'Fisher’s Iris data set'
 # My aim is to display how the three species of flowers differentiate themselves on a statistical point of view
-# I will outline a discriminanting principle to predict a species from its set of measurement
+# I will outline a discriminating principle to predict a species from its set of measurement
 # Author: Andrea Cignoni
 
 import pandas as pd
@@ -37,7 +37,7 @@ print(df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # HISTOGRAMS
 # Creating an histogram for each dimension which will be measured on the x axis
-# Trasparency achieved with alpha attribute: the iris setosa species stands on its own while the other two species are overlaid in every graph
+# Transparency achieved with alpha attribute: the iris setosa species stands on its own while the other two species are overlaid in every graph
 
 # 1. Plotting sepal lengths
 
@@ -118,12 +118,11 @@ plt.show()
 # iris setosa remains segregated from the other two species as in the previous histograms
 # Plotting all the 6 possible combination of 2 dimensions scatterplots to identify where the the iris versicolor and the iris virginica are more visibly distinguished
 
-# select setosa and versicolor and virginica: 
-y = df.iloc[0:150, 4].values
-y = np.where(y == 'Iris-setosa', 0, 1)
 
 # 1. Sepal and petal length
 
+# the iloc function used to return a view of the selected rows and columns from dataframe
+# Values attribute added to return the Numpy representation of the two dimension array to manipulate it as a list
 X = df.iloc[0:150,[0, 2]].values
 
 # selecting rows and distinguishing flowers by colours
@@ -249,7 +248,7 @@ plt.legend(loc='upper right')
 plt.show()
 
 # Pairwise scatter plots generated with Seaborn to achieve a global overview of all 6 combinations of the 2 dimensions graphs
-# using a whitegrid pattern to establish a discrimination principle between iris virginica and iris versicolor
+# using a white grid pattern to establish a discrimination principle between iris virginica and iris versicolor
 
 sns.set_style("whitegrid")
 sns.pairplot(df, hue="class", palette= ["blue","green","red"], markers=["o","s","*"], height=1.5)
@@ -258,7 +257,7 @@ plt.show()
 # Scatter plot based on petal length and width show a weaker correlation between iris virginica and iris versicolor
 # Using measures on y, x axis and lines drawn on the above said scatterplot
 # we can build a simple model through a 3 if-else conditions statement to classify each flower type:
-# 1. IF PETAL WIDTH IS < THAN 2 IS SETOSA
+# 1. IF PETAL WIDTH AND PETAL LENGTH ≤ THAN 1 IS SETOSA
 # 2. ELIF PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND 
 # PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
 # 3. ELSE IS VIRGINICA
