@@ -121,11 +121,12 @@ plt.show()
 
 # 1. Sepal and petal length
 
+# Creating a variable X with values from file rows and columns
 # the iloc function used to return a view of the selected rows and columns from dataframe
 # Values attribute added to return the Numpy representation of the two dimension array to manipulate it as a list
 X = df.iloc[0:150,[0, 2]].values
 
-# selecting rows and distinguishing flowers by colours
+# passing two arguments as 0 and 1 to variable X and distinguishing flowers by colours and forms
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')
@@ -146,7 +147,7 @@ plt.show()
 
 X = df.iloc[0:150,[1, 3]].values
 
-# selecting rows and distinguishing flowers by colours
+# passing two arguments as 0 and 1 to variable X and distinguishing flowers by colours and forms
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
@@ -167,7 +168,7 @@ plt.show()
 
 X = df.iloc[0:150,[2, 3]].values
 
-# selecting rows and distinguishing flowers by colours
+# passing two arguments as 0 and 1 to variable X and distinguishing flowers by colours and forms
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
@@ -188,7 +189,7 @@ plt.show()
 
 X = df.iloc[0:150,[0, 1]].values
 
-# selecting rows and distinguishing flowers by colours
+# passing two arguments as 0 and 1 to variable X and distinguishing flowers by colours and forms
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
@@ -209,7 +210,7 @@ plt.show()
 
 X = df.iloc[0:150,[1, 2]].values
 
-# selecting rows and distinguishing flowers by colours
+# passing two values as 0 and 1 to variable X and distinguishing flowers by colours
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
