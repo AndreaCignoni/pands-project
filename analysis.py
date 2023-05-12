@@ -1,7 +1,7 @@
 # Analysis.py
-# This program summarizes my researches on 'Fisher’s Iris data set'
+# This program summarizes my researches on the 'Fisher’s Iris data set'
 # My aim is to display how the three species of flowers differentiate themselves on a statistical point of view
-# I will outline a discriminating principle to predict a species from its set of measurement
+# I will outline a discriminating principle to predict a species from its set of measurements
 # Author: Andrea Cignoni
 
 import pandas as pd
@@ -9,34 +9,34 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Reading and formatting the data set downloaded (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
+# Reading and formatting the data set downloaded from (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
 
 df = pd.read_csv("iris.csv", header=None,)
 
-# Creating a file called *irisDatasetSummary.txt* to summarize the basic information of the dataset
-print("This dataset contains 5 variables, 4 measurements and class of flower, for 150 observations", file =open("irisDatasetSummary.txt", "w"))
+#Creating a file called "irisDatasetSummary.txt" to summarize the basic information of the dataset
+print("This dataset contains 5 variables- 4 measurements and class of flower- for 150 observations", file =open("irisDatasetSummary.txt", "w"))
 
-print("\n","Below are shown the first and the last five raws of the dataset.", file=open("irisDatasetSummary.txt", "a"))
+print("\n","Below are shown the first and the last five rows of the dataset", file=open("irisDatasetSummary.txt", "a"))
 df.columns= ['sepal_length','sepal_width','petal_length','petal_width','class']
-# this shows first and last five raws of all data  
+# this shows the first and last five rows of all data  
 print(df, file=open("irisDatasetSummary.txt", "a"))
 print("\n","These are the main statistical information of the dataset:","\n",file=open("irisDatasetSummary.txt","a"))
-# to display stats about data
+# this function is to display stats about data
 print(df.describe(),file=open("irisDatasetSummary.txt","a"))
-# to display number of samples on each class
+# Showing number of samples for each class
 print("\n","Number of samples for each class:","\n",file=open("irisDatasetSummary.txt","a"))
 print(df['class'].value_counts(),file=open("irisDatasetSummary.txt","a"))
-# Grouping the mean values of the three species and showing their correlation
-print("\n","The mean values of the three classes is as follows:","\n",file=open("irisDatasetSummary.txt","a"))
+# Grouping the mean values of the three species and their correlation
+print("\n","Mean values of the three classes:","\n",file=open("irisDatasetSummary.txt","a"))
 print(df.groupby('class').mean(),file=open("irisDatasetSummary.txt","a"))
-print("\n","This is how the values are correlated:","\n",file=open("irisDatasetSummary.txt","a"))
+print("\n","Values correlation:","\n",file=open("irisDatasetSummary.txt","a"))
 print(df.groupby('class').corr(),file=open("irisDatasetSummary.txt","a"))
 # Preprocessing the dataset: check for null values
 print("\n","As shown below, no missing values were found in the raw file:","\n",file=open("irisDatasetSummary.txt","a"))
 print(df.isnull().sum(),file=open("irisDatasetSummary.txt","a"))
 
 # HISTOGRAMS
-# Creating an histogram for each dimension which will be measured on the x axis
+# Creating an histogram for each variable shown as a dimension on the x axis
 # Transparency achieved with alpha attribute: the iris setosa species stands on its own while the other two species are overlaid in every graph
 
 # 1. Plotting sepal lengths
@@ -116,19 +116,20 @@ plt.show()
 # SCATTERPLOTS
 # Scatterplots used to graphically distinguish iris versicolor from iris virginica
 # iris setosa remains segregated from the other two species as in the previous histograms
-# Plotting all the 6 possible combination of 2 dimensions scatterplots to identify where the the iris versicolor and the iris virginica are more visibly distinguished
-
+# Plotting all the 6 possible combination on 2 dimensions scatterplots:
+# the iris versicolor and the iris virginica are more visibly distinguished where petal length and petal width are plotted
+# My point of reference to generate scaterplotts is https://vitalflux.com/python-creating-scatter-plot-with-iris-dataset/
 
 # 1. Sepal and petal length
 
-# Creating a variable X with values from file rows and columns
-# the iloc function used to return a view of the selected rows and columns from dataframe
-# Values attribute added to return the Numpy representation of the two dimension array to manipulate it as a list
+# Creating a variable X with 2 values - [0]  and [1] - and a class slacing the class column
+# The iloc function is used to return a view of the selected rows and columns from dataframe
+# Values attribute added to return the Numpy representation of the two dimension array and allow list manipulation
 X = df.iloc[0:150,[0, 2]].values
 
 # Passing data from first dimension "sepal_length" [:,0] and second dimension "petal_length" [:,1] to variable X:
-# in fact, in this case, the "x" and "y" of the graph are both from X.
-# Plotting flowers by colours and markers
+# in fact, in this case, the "x" and "y" of the graph are stored in X.
+# Distinguishing flowers by colours and markers
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker='o', label='Setosa')
@@ -170,7 +171,7 @@ plt.show()
 
 X = df.iloc[0:150,[2, 3]].values
 
-# passing two arguments as 0 and 1 to variable X and distinguishing flowers by colours and forms
+# Designing scatterplot variables
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
@@ -191,7 +192,7 @@ plt.show()
 
 X = df.iloc[0:150,[0, 1]].values
 
-# passing two arguments as 0 and 1 to variable X and distinguishing flowers by colours and forms
+# Designing scatterplot variables
 
 plt.scatter(X[:50, 0], X[:50, 1],
             color='blue', marker= 'o', label='Setosa')
@@ -250,16 +251,16 @@ plt.legend(loc='upper right')
 
 plt.show()
 
-# Pairwise scatter plots generated with Seaborn to achieve a global overview of all 6 combinations of the 2 dimensions graphs
-# using a white grid pattern to establish a discrimination principle between iris virginica and iris versicolor
+# Pairwise scatter plots generated with Seaborn to achieve a global overview of all 6 combinations of the 2 dimensions graphs and the 4 one dimension histograms
+# using a white grid pattern to establish a discrimination principle between the three species
 
 sns.set_style("whitegrid")
 sns.pairplot(df, hue="class", palette= ["blue","green","red"], markers=["o","s","*"], height=1.5)
 plt.show()
 
 # Scatter plot based on petal length and width show a weaker correlation between iris virginica and iris versicolor
-# Using measures on y, x axis and lines drawn on the above said scatterplot
-# we can build a simple model through a 3 if-else conditions statement to classify each flower type:
+# Using measures on y and x axis with their linear projection we can build a simple model through a 3 if-else conditions statement 
+# and classify each flower type as follows:
 # 1. IF PETAL WIDTH AND PETAL LENGTH ≤ THAN 1 IS SETOSA
 # 2. ELIF PETAL WIDTH IS ≤ THAN 2 CM AND ≥ THAN 1 CM AND 
 # PETAL LENGTH IS ≤ THAN 5 AND ≥ THAN 2.5 CM THEN IS VERSICOLOR
