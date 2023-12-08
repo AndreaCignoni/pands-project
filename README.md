@@ -168,7 +168,7 @@ The *pairplot* method can create also a grid of axes such that each variable in 
 
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/ae27d7f9d2589f15229153775c23ac42c908ff19/Focus.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Img/Focus.png?raw=true)
 </div>
 
 **Using the measures on y, x axis and the lines dividing data on the above *scatterplot* we can build a simple model through a 3 if-else conditions statement to classify each flower type which is also the aim of my research:**  
