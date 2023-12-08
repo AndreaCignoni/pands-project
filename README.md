@@ -55,17 +55,17 @@ The content of the dataset has been summarized in a user-friendly format groupin
 
 + *df.describe()*
 
-![df.describe](DataFrameDescribe.PNG)
+![df.describe](https://github.com/AndreaCignoni/pands-project/blob/main/Img/DataFrameDescribe.PNG?raw=true)
 
 - *df['class'].value_counts()*
 
-![df.class](ClassCounts.PNG)
+![df.class](https://github.com/AndreaCignoni/pands-project/blob/main/Img/ClassCounts.PNG?raw=true
 
 * *df.groupby('class').mean* and *groupby('class').corr()*
 
-![df.groupby](image-1.png)
+![df.groupby.mean](https://github.com/AndreaCignoni/pands-project/blob/main/Img/MeanValues.PNG?raw=true)
 
-![Alt text](image-2.png)
+![df.groupby.corr](https://github.com/AndreaCignoni/pands-project/blob/main/Img/Correlation.PNG?raw=true)
 
 </div>
 
@@ -78,7 +78,7 @@ Before proceeding to my actual analysis, I have *preprocessed* the data containe
 
 <div align="text-align: right">
 
-![Preprocessing Data](ClassCounts-6.PNG)
+![Preprocessing Data](https://github.com/AndreaCignoni/pands-project/blob/main/Img/PreprocessingData.PNG?raw=true)
 </div>
 
 **EXPLORATORY DATA ANALYSIS** 
@@ -96,16 +96,16 @@ The four below plots are based on 2 variables each: one measurement and a class 
 
 <div align="center">
 
-![Petal_Length](ClassCounts-8.PNG)
+![Petal_Length](https://github.com/AndreaCignoni/pands-project/blob/main/Img/Petal_Length.png?raw=true)
 
 
-![Petal_Width](ClassCounts-9.PNG)
+![Petal_Width](https://github.com/AndreaCignoni/pands-project/blob/main/Img/Petal_Width.png?raw=true)
 
 
-![Sepal_Length](ClassCounts-10.PNG)
+![Sepal_Length](https://github.com/AndreaCignoni/pands-project/blob/main/Img/Sepal_Length.png?raw=true)
 
 
-![Sepal_Width](ClassCounts-11.PNG))
+![Sepal_Width](https://github.com/AndreaCignoni/pands-project/blob/main/Img/Sepal_Width.png?raw=true)
 
 </div>
 
@@ -122,37 +122,37 @@ The following scatterplots show that a *linear* correlation separate the *iris s
 + Sepal width and length displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/dfb0e62aa6a4dd735bdfb7559febee03402f44b0/SepalLengthWidth.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Img/SepalLengthWidth.png?raw=true)
 </div>
 
 * Petal length and width displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/b58ed4ae833ee5a392e0c0e2f5f0931a8b76dc70/PetalLengthWidth.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Img/PetalLengthWidth.png?raw=true)
 </div>
 
 - Sepal and petal width displayed;
 <div align="center">
 
-![Scatterplot](https://github.com/AndreaCignoni/pands-project/blob/b7fc59b5dcad86110cc8297bbbcaada4cc4b6b7b/PetalSepalWidth.png)
+![Scatterplot](https://github.com/AndreaCignoni/pands-project/blob/main/Img/PetalSepalWidth.png?raw=true)
 </div>
 
 + Petal and sepal length displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/78e075090160404148053bd550e5101deb697024/PetalSepalLength.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Img/PetalSepalLength.png?raw=true)
 </div>
 
 - Sepal length and petal width displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/bfced1b2a94b372551ed265ab76abdfca48b2b94/SepalLengthPetalWidth.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Img/SepalLengthPetalWidth.png?raw=true)
 </div>
 
 * Petal length and sepal width displayed;
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/1099840cc4b101f026c7f73da87ee3e65bedeb02/SepalWidthPetalLength.png)
+![Screenshot](hhttps://github.com/AndreaCignoni/pands-project/blob/main/Img/SepalWidthPetalLength.png?raw=true)
 </div>
 
 As can be easily noticed, the second *scatterplot*, where the dimensions taken into consideration are the *petal length* and the *petal width*, is the one that describe a clearer distinction between the two classes of flowers. However, to develop the necessary system of reference to assess a form of principle to isolate one class of flower from the other two, I have drawn on *pairs plot* and its grids. For plotting *scatterplots* and comprehend their usage, my source here has been [visme](https://visme.co/blog/scatter-plot/).  
@@ -160,7 +160,7 @@ The *pairs plot* below display a global overview of all the plots so far shown a
 
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/PairPlots.png)
+![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/main/Img/PairPlots.png?raw=true)
 </div>
 
 In order to generate the above plot and learn the most relevant *Seaborn*'s features, I have followed [seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.pairplot.html). The *Seaborn Pairplot* function is used to plot pairwise relationships between variables within a dataset. The pairs plot builds on two basic figures, the *histogram* and the *scatter plot*. The *histogram* on the diagonal allows us to see the distribution of a single variable while the *scatter plots* on the upper and lower triangles show the relationship (or lack thereof) between two variables. This creates a nice visualisation and helps understand the data by summarising the whole *Fisher's Iris Data Set* in a single figure.  
