@@ -10,7 +10,7 @@ In 1936, Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962), an alread
 The Iris dataset consists of 150 instances with 50 plants each of three classes of Iris plant, namely *Iris versicolor*, *Iris virginica* and *Iris setosa*. Sir Ronald Fisher summarised his studies in a diagram where he developed a discriminant function that performed well in discriminating between these species. As a matter of fact, the below picture shows that the three species of iris are very similar and it is, therefore, very interesting to note how the different species characterization can be drawn from a statistical perspective.
 <div align="center"> 
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/main/Iris.png)
+![Iris](Iris.png)
 
 </div>
 
@@ -43,7 +43,7 @@ To load the data frame, manipulate its content and output a summary of its main 
 
 <div align="center">
 
-![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/IndexingDataFrame.PNG)
+![Indexing]](image.png)
 
 </div>
 
@@ -55,17 +55,17 @@ The content of the dataset has been summarized in a user-friendly format groupin
 
 + *df.describe()*
 
-![ScreenShot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/DataFrameDescribe.PNG)
+![df.describe](DataFrameDescribe.PNG)
 
 - *df['class'].value_counts()*
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/ClassCounts.PNG)
+![df.class](ClassCounts.PNG)
 
 * *df.groupby('class').mean* and *groupby('class').corr()*
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/a6c8e3fc2a5e16921701f1c7c8e16647cfcd3b21/MeanValues.PNG)
+![df.groupby](ClassCounts-4.PNG)
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/a6c8e3fc2a5e16921701f1c7c8e16647cfcd3b21/Correlation.PNG)
+![df.groupy.corr](ClassCounts-5.PNG)
 
 </div>
 
@@ -78,7 +78,7 @@ Before proceeding to my actual analysis, I have *preprocessed* the data containe
 
 <div align="text-align: right">
 
-![Screenshot](https://github.com/AndreaCignoni/mywork/blob/908532f4e05af5576c4802e2b1924e260c94269e/PreprocessingData.PNG)
+![Preprocessing Data](ClassCounts-6.PNG)
 </div>
 
 **EXPLORATORY DATA ANALYSIS** 
@@ -96,16 +96,16 @@ The four below plots are based on 2 variables each: one measurement and a class 
 
 <div align="center">
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/50345098de351dcba6c3066caef594e990c08046/Petal_Length.png)
+![Petal_Length](ClassCounts-8.PNG)
 
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/50345098de351dcba6c3066caef594e990c08046/Petal_Width.png)
+![Petal_Width](ClassCounts-9.PNG)
 
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/Sepal_Length.png)
+![Sepal_Length](ClassCounts-10.PNG)
 
 
-![Screenshot](https://github.com/AndreaCignoni/pands-project/blob/40e2dd861b2d92842600b8b45aa22c25bbf00320/Sepal_Width.png)
+![Sepal_Width](ClassCounts-11.PNG))
 
 </div>
 

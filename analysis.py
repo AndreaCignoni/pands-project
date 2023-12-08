@@ -11,7 +11,7 @@ import seaborn as sns
 
 # Reading and formatting the data set downloaded from (https://archive.ics.uci.edu/ml/machine-learning-databases/iris/)
 
-df = pd.read_csv("iris.csv", header=None,)
+df = pd.read_csv("/Users/andreacignoni/Desktop/Scrivania - Mac mini di Andrea/Repos/Pands/pands-project/Data/iris.csv", header=None,)
 
 #Creating a file called "irisDatasetSummary.txt" to summarize the basic information of the dataset
 print("This dataset contains 5 variables- 4 measurements and class of flower- for 150 observations", file =open("irisDatasetSummary.txt", "w"))
