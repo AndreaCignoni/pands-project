@@ -63,9 +63,9 @@ The content of the dataset has been summarized in a user-friendly format groupin
 
 * *df.groupby('class').mean* and *groupby('class').corr()*
 
-![df.groupby](ClassCounts-4.PNG)
+![df.groupby](image-1.png)
 
-![df.groupy.corr](ClassCounts-5.PNG)
+![Alt text](image-2.png)
 
 </div>
 
