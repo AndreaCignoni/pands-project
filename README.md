@@ -10,7 +10,7 @@ In 1936, Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962), an alread
 The Iris dataset consists of 150 instances with 50 plants each of three classes of Iris plant, namely *Iris versicolor*, *Iris virginica* and *Iris setosa*. Sir Ronald Fisher summarised his studies in a diagram where he developed a discriminant function that performed well in discriminating between these species. As a matter of fact, the below picture shows that the three species of iris are very similar and it is, therefore, very interesting to note how the different species characterization can be drawn from a statistical perspective.
 <div align="center"> 
 
-![Iris](Iris.png)
+![Iris](https://github.com/AndreaCignoni/pands-project/blob/b6ee290d0a63f3203dbcb00e1d78ccc0d9a994f2/Img/Iris.png)
 
 </div>
 
