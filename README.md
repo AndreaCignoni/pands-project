@@ -43,7 +43,7 @@ To load the data frame, manipulate its content and output a summary of its main 
 
 <div align="center">
 
-![Indexing]](https://github.com/AndreaCignoni/pands-project/blob/main/Img/IndexingDataFrame.PNG)
+![Indexing](https://github.com/AndreaCignoni/pands-project/blob/main/Img/IndexingDataFrame.PNG)
 
 </div>
 
