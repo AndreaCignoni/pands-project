@@ -59,7 +59,7 @@ The content of the dataset has been summarized in a user-friendly format groupin
 
 - *df['class'].value_counts()*
 
-![df.class](https://github.com/AndreaCignoni/pands-project/blob/main/Img/ClassCounts.PNG?raw=true
+![df.class](https://github.com/AndreaCignoni/pands-project/blob/main/Img/ClassCounts.PNG?raw=true)
 
 * *df.groupby('class').mean* and *groupby('class').corr()*
 
