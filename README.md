@@ -152,7 +152,7 @@ The following scatterplots show that a *linear* correlation separate the *iris s
 * Petal length and sepal width displayed;
 <div align="center">
 
-![Screenshot](hhttps://github.com/AndreaCignoni/pands-project/blob/main/Img/SepalWidthPetalLength.png?raw=true)
+![Screenshot](/Users/andreacignoni/Desktop/Scrivania - Mac mini di Andrea/Repos/Pands/pands-project/Img/SepalWidthPetalLength.png)
 </div>
 
 As can be easily noticed, the second *scatterplot*, where the dimensions taken into consideration are the *petal length* and the *petal width*, is the one that describe a clearer distinction between the two classes of flowers. However, to develop the necessary system of reference to assess a form of principle to isolate one class of flower from the other two, I have drawn on *pairs plot* and its grids. For plotting *scatterplots* and comprehend their usage, my source here has been [visme](https://visme.co/blog/scatter-plot/).  
